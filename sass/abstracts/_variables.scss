@@ -1,9 +1,20 @@
 // * COLORS
 
 $color-primary: #2E20A7;
+$color-primary-90: color.adjust($color-primary, $alpha: -0.10);
+$color-primary-80: color.adjust($color-primary, $alpha: -0.20);
+$color-primary-70: color.adjust($color-primary, $alpha: -0.30);
+$color-primary-60: color.adjust($color-primary, $alpha: -0.40);
 
-$color-secondary: #FF7D03;
+$color-secondary: #FFA015;
+
+$color-secondary-80: #fbc300;
+
+$color-link: #4F5CD5;
+
+$color-black: #000;
+$color-gray: #303032;
+$color-white: #fff;
 
 // * TYPO
-
 $font-family: 'Raleway', sans-serif;
