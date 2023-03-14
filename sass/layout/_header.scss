@@ -1,0 +1,41 @@
+@use "../abstracts/" as *;
+@use "../base/" as *;
+
+.header
+{
+    display: grid;
+    grid-template-columns: 1fr 5fr 6fr;
+    grid-template-rows: repeat(8, 1fr);
+    // grid-template-areas: "logo-nav  bg-i" "" "" "" "" "" "" ". . bg-i";
+
+    &__background-color
+    {
+        background-color: $color-primary;
+        grid-column: 1 / span 2;
+        grid-column: 1 / span 7;
+    }
+
+    &__link
+    {}
+
+    &__heading
+    {}
+
+    &__button
+    {}
+
+    &__background-image
+    {}
+
+    &__background-filter
+    {
+        z-index: 2;
+        background-color: $color-primary;
+        grid-column: 2 / 3;
+    }
+
+    .navigation
+    {}
+
+
+}
