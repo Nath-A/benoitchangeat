@@ -1,0 +1,19 @@
+@use "../abstracts" as *;
+
+.button-primary
+{
+
+    &,
+    &:link,
+    &:visited
+    {
+        display: grid;
+        background-color: $color-primary;
+        border-radius: 10px;
+        color: $color-white;
+        padding: 2rem 4rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+}

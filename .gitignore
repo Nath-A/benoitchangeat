@@ -24,4 +24,4 @@ dist-ssr
 *.sw?
 
 
-_raw/_gitignore/
+_raw/gitignore/

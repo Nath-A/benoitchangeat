@@ -1,1 +1,25 @@
+@use "../abstracts" as *;
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Raleway:ital,wght@0,300;0,400;0,500;0,700;0,800;0,900;1,400&display=swap');
+
+body
+{
+    font-family: $font-family;
+}
+
+.heading-primary
+{
+    color: $color-white;
+    font-weight: 900;
+
+    &--up
+    {
+        font-size: 11rem
+    }
+
+    &--main
+    {
+        text-transform: uppercase;
+        font-size: 5rem;
+    }
+}

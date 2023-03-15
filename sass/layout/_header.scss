@@ -4,38 +4,103 @@
 .header
 {
     display: grid;
-    grid-template-columns: 1fr 5fr 6fr;
-    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: 1fr 5fr repeat(6, 1fr);
+    // grid-template-rows: repeat(8, 1fr);
+    height: 100vh; // ! to remove after testing
     // grid-template-areas: "logo-nav  bg-i" "" "" "" "" "" "" ". . bg-i";
 
     &__background-color
     {
         background-color: $color-primary;
         grid-column: 1 / span 2;
-        grid-column: 1 / span 7;
+        grid-row: 1 / span 6;
     }
 
     &__link
-    {}
+    {
+        grid-column: 1 / span 1;
+        grid-row: 1/ span 4;
+        align-self: center;
+        justify-self: end;
+
+    }
 
     &__heading
-    {}
+    {
+        grid-column: 2 / span 1;
+        grid-row: 3 / span 3;
+
+    }
 
     &__button
-    {}
+    {
+        grid-column: 2;
+        grid-row: 6 / span 2;
+        align-self: center;
+        justify-self: center;
+
+    }
 
     &__background-image
-    {}
+    {
+        background-image: url(../../img/01_header-fabio-comparelli-uq2E2V4LhCY-unsplash.jpg);
+        background-position: center;
+        background-size: cover;
+        grid-column: 3 / span 6;
+        grid-row: 1 / span 7;
+        background-repeat: no-repeat;
+    }
 
     &__background-filter
     {
         z-index: 2;
         background-color: $color-primary;
-        grid-column: 2 / 3;
+        grid-column: 3 / span 1;
+        grid-row: 1 / span 7;
+        mix-blend-mode: screen;
     }
 
     .navigation
-    {}
+    {
+        display: none;
+    }
 
+    .heading-primary
+    {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, min-content);
+        justify-items: start;
 
+        &--up
+        {
+            grid-column: 1;
+            grid-row: 1;
+            position: relative;
+
+            &__text
+            {
+                z-index: 50;
+                position: relative;
+            }
+
+            &__underline
+            {
+                display: flex;
+                transform: translateY(-4.5rem);
+
+            }
+
+        }
+
+        &__arrow
+        {
+            grid-column: 2;
+        }
+
+        &--main
+        {
+            grid-column: 1 / span 2;
+        }
+    }
 }
