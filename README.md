@@ -27,4 +27,4 @@
 
 ## Question à poser
 - [ ] Est ce que le logo doit etre clickable (et mener où) ?
-- [ ] Est ce que le burger menu doit etre fixé ?
+- [x] Est ce que le burger menu doit etre fixé ? - **OUI DANS L'IDEAL**
