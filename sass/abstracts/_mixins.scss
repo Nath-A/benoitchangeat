@@ -1,0 +1,6 @@
+@mixin grid-center
+{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}

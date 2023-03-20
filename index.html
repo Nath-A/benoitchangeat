@@ -9,44 +9,48 @@
 </head>
 
 <body>
+    <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+        <label for="navi-toggle" class="navigation__button"><span class="navigation__icon">&nbsp;</span></label>
+        <div class="navigation__background">&nbsp;</div>
+        <nav class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="#" class="navigation__link">accueil</a>
+                </li>
+                <li class="navigation__item"><a href="#" class="navigation__link">qui suis-je ?</a>
+                </li>
+                <li class="navigation__item"><a href="#" class="navigation__link">cadeau offert</a>
+                </li>
+                <li class="navigation__item"><a href="#" class="navigation__link">mes offres</a>
+                </li>
+                <li class="navigation__item"><a href="#" class="navigation__link">contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
     <header class="header">
         <div class="header__background-color"></div>
-        <a href="#" class="header__link"><img src="img/01_header-benoitchangeat-logo-vertical.svg"
-                alt="benoitchangeat logo" class="header__logo" width="40"></a>
-        <div class="navigation">
-            <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
-            <label for="navi-toggle" class="navigation__button"><span class="navigation__icon">&nbsp;</span></label>
-            <div class="navigation__background">&nbsp;</div>
-            <nav class="navigation__nav">
-                <ul class="navigation__list">
-                    <li class="navigation__item"><a href="#" class="navigation__link">Ancre n°1</a>
-                    </li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Ancre n°2</a>
-                    </li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Ancre n°3</a>
-                    </li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Ancre n°4</a>
-                    </li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Ancre n°5</a>
-                    </li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Ancre n°6</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+        <img src="img/01_header-benoitchangeat-logo-vertical.svg" alt="benoitchangeat logo" class="header__logo"
+            width="40">
+
 
         <h1 class="header__heading heading-primary">
             <span class="heading-primary--up">
                 <span class="heading-primary--up__text">Et si</span>
                 <span class="heading-primary--up__underline"><img src="img/01_header-soulignement-etsi.svg" alt="">
                 </span>
-            </span>
-            <span class="heading-primary__arrow"><img src="img/01_header-fleche-blanche.svg" alt="flèche blanche"
+            </span><span class="heading-primary__arrow"><img src="img/01_header-fleche-blanche.svg" alt="flèche blanche"
                     width="150"></span>
-            <span class="heading-primary--main">trouver sa voie devenait <span class="u_rotate3">facile<span
-                        class="heading-primary--main__underline"><img src="img/01_header-soulignement-facile.svg" alt=""
-                            srcset="">
-                    </span></span> ?</span>
+
+            <span class="heading-primary--main">
+                trouver sa voie devenait
+                <span class="u_rotate3 heading-primary--main__text">facile <span
+                        class="heading-primary--main__underline">
+                        <img src="img/01_header-soulignement-facile.svg" alt="" srcset="">
+                    </span></span>?
+
+            </span>
+
         </h1>
         <a href="#mes-offres" class="header__button button-primary">Démarrer l’aventure</a>
         <div class="header__background-image"></div>
