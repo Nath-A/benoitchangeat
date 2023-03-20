@@ -1,28 +1,6 @@
 # benoitchangeat * un coach qui roxe du pinpon
-
-## To do V1.0
-### Mardi 14/03
-- [ ] structurer HTML
-  - [x] header
-  - [ ] accroche
-
-### Mercredi 15/03
-- [ ] Résoudre le probleme du color.adjust
-- [ ] Importer variables réutilisables 
-  - [ ] colors
-  - [ ] fonts
-  - [ ] utility classes 
-
-
-### Undefined
-- [ ] recomprendre le cheatcode pour le navmenu avec la checkbox
-- [ ] créer les mixins 
-  - [ ] pour les buttons
-  - [ ] pour les inputs
-  
-
-### Opti au poil de cul
-- [ ] Optimiser les images en fonction de la VW avec srcset
+### TO DO LIST
+[Lien Notion](https://aujoyeuxbordeldenath.notion.site/4deaa1e3cf1b477897adf77ec91cf372?v=3e91c6d4284244d4b697efad78b4ee55)
 
 
 ## Question à poser
