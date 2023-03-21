@@ -11,6 +11,7 @@ export default {
     {
         devSourcemap: true,
     },
+
     assetsInclude: ['/img'],
 
 
