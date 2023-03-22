@@ -13,8 +13,8 @@
         height: 5rem;
         width: 5rem;
         position: fixed;
-        top: 0.25rem;
-        left: 9.5rem;
+        top: 5rem;
+        left: 10rem;
         border-radius: 50%;
         z-index: 2000;
         box-shadow: 0 1rem 3rem rgba($color-black, .1);
@@ -30,8 +30,8 @@
         width: 4rem;
         border-radius: 100%;
         position: fixed;
-        top: 1rem;
-        left: 10rem;
+        top: 4.5rem;
+        left: 9rem;
         background-image: radial-gradient($color-primary-60, $color-primary);
         z-index: 999;
         transition: transform .8s;
@@ -121,8 +121,7 @@
         {
             width: 3rem;
             height: 2px;
-            // background-color: $color-white;
-            background-color: red;
+            background-color: $color-white;
             display: inline-block;
         }
 
