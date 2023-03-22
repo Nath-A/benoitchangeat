@@ -3,14 +3,16 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "source": "index.html",
   "scripts": {
     "dev": "vite",
     "compile": "sass sass/main.scss css/preview-style.comp.css",
-    "build": "",
-    "preview": "vite preview"
+    "start": "parcel",
+    "build": "parcel build"
   },
   "devDependencies": {
-    "parcel": "^2.8.3",
+    "@parcel/transformer-sass": "^2.8.3",
+    "parcel": "letest",
     "sass": "^1.58.3",
     "vite": "^4.1.0"
   }
