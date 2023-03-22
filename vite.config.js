@@ -3,7 +3,9 @@
 export default {
     // config options
     build: {
-        outDir: "docs",
+        outDir: "preview",
+        cssTarget: "chrome61",
+        minify: false,
 
 
     },

@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "compile": "sass sass/main.scss css/preview-style.comp.css",
+    "build": "",
     "preview": "vite preview"
   },
   "devDependencies": {
