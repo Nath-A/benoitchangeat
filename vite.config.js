@@ -3,7 +3,7 @@
 export default {
     // config options
     build: {
-        outDir: "_testing",
+        outDir: "docs",
 
 
     },
