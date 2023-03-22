@@ -3,7 +3,7 @@
 export default {
     // config options
     build: {
-        outDir: "_preview-wip",
+        outDir: "_testing",
 
 
     },
@@ -11,8 +11,5 @@ export default {
     {
         devSourcemap: true,
     },
-
-    assetsInclude: ['/img'],
-
 
 }
