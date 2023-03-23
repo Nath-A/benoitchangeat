@@ -1,7 +1,21 @@
+@use "../abstracts" as *;
+
 .u_rotate3
 {
     display: inline-block !important;
     transform: rotate(-3deg) !important;
+}
+
+
+.u_color-secondary
+{
+    color: $color-secondary !important;
+}
+
+
+.u_bold
+{
+    font-weight: 700;
 }
 
 // .u_underlineSVGparent

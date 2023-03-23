@@ -1,0 +1,231 @@
+%!Adobe-FontList 1.18
+%Locale:0x40c
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MinionPro-Regular
+FamilyName:Minion Pro
+StyleName:Regular
+FullName:Minion Pro
+MenuName:Minion Pro
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:E:\_Projets\_VisualStudioCode\benoitchangeat\_raw\Dossier ONE_PAGE_V1\Document fonts\MinionPro-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+FileLength:218640
+FileModTime:1678036061
+WeightClass:400
+WidthClass:5
+AngleClass:0
+DesignSize:110
+NameArray:0,Mac,4,Minion Pro
+NameArray:0,Win,1,Minion Pro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Poppins-ExtraLight
+FamilyName:Poppins
+StyleName:ExtraLight
+FullName:Poppins ExtraLight
+MenuName:Poppins ExtraLight
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:E:\_Projets\_VisualStudioCode\benoitchangeat\_raw\Dossier ONE_PAGE_V1\Document fonts\Poppins-ExtraLight.ttf
+DataFormat:sfntData
+hasSVG:no
+FileLength:161404
+FileModTime:1678036061
+WeightClass:275
+WidthClass:5
+AngleClass:0
+NameArray:0,Win,1,Poppins ExtraLight
+NameArray:0,Win,16,Poppins
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Raleway-Black
+FamilyName:Raleway
+StyleName:Black
+FullName:Raleway Black
+MenuName:Raleway Black
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:E:\_Projets\_VisualStudioCode\benoitchangeat\_raw\Dossier ONE_PAGE_V1\Document fonts\Raleway-Black.ttf
+DataFormat:sfntData
+hasSVG:no
+FileLength:180592
+FileModTime:1678036061
+WeightClass:900
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Raleway Black
+NameArray:0,Win,1,Raleway Black
+NameArray:0,Win,16,Raleway
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Raleway-Bold
+FamilyName:Raleway
+StyleName:Bold
+FullName:Raleway Bold
+MenuName:Raleway
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:E:\_Projets\_VisualStudioCode\benoitchangeat\_raw\Dossier ONE_PAGE_V1\Document fonts\Raleway-Bold.ttf
+DataFormat:sfntData
+hasSVG:no
+FileLength:179244
+FileModTime:1678036061
+WeightClass:700
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Raleway Bold
+NameArray:0,Win,1,Raleway
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Raleway-ExtraBold
+FamilyName:Raleway
+StyleName:ExtraBold
+FullName:Raleway ExtraBold
+MenuName:Raleway ExtraBold
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:E:\_Projets\_VisualStudioCode\benoitchangeat\_raw\Dossier ONE_PAGE_V1\Document fonts\Raleway-ExtraBold.ttf
+DataFormat:sfntData
+hasSVG:no
+FileLength:178128
+FileModTime:1678036061
+WeightClass:800
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Raleway ExtraBold
+NameArray:0,Win,1,Raleway ExtraBold
+NameArray:0,Win,16,Raleway
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Raleway-Italic
+FamilyName:Raleway
+StyleName:Italic
+FullName:Raleway Italic
+MenuName:Raleway
+StyleBits:1
+WritingScript:Roman
+OutlineFileName:E:\_Projets\_VisualStudioCode\benoitchangeat\_raw\Dossier ONE_PAGE_V1\Document fonts\Raleway-Italic.ttf
+DataFormat:sfntData
+hasSVG:no
+FileLength:145920
+FileModTime:1678036061
+WeightClass:400
+WidthClass:5
+AngleClass:1
+NameArray:0,Mac,4,Raleway Italic
+NameArray:0,Win,1,Raleway
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Raleway-Light
+FamilyName:Raleway
+StyleName:Light
+FullName:Raleway Light
+MenuName:Raleway Light
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:E:\_Projets\_VisualStudioCode\benoitchangeat\_raw\Dossier ONE_PAGE_V1\Document fonts\Raleway-Light.ttf
+DataFormat:sfntData
+hasSVG:no
+FileLength:182376
+FileModTime:1678036061
+WeightClass:300
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Raleway Light
+NameArray:0,Win,1,Raleway Light
+NameArray:0,Win,16,Raleway
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Raleway-Medium
+FamilyName:Raleway
+StyleName:Medium
+FullName:Raleway Medium
+MenuName:Raleway Medium
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:E:\_Projets\_VisualStudioCode\benoitchangeat\_raw\Dossier ONE_PAGE_V1\Document fonts\Raleway-Medium.ttf
+DataFormat:sfntData
+hasSVG:no
+FileLength:179444
+FileModTime:1678036061
+WeightClass:500
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Raleway Medium
+NameArray:0,Win,1,Raleway Medium
+NameArray:0,Win,16,Raleway
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Raleway-Regular
+FamilyName:Raleway
+StyleName:Regular
+FullName:Raleway
+MenuName:Raleway
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:E:\_Projets\_VisualStudioCode\benoitchangeat\_raw\Dossier ONE_PAGE_V1\Document fonts\Raleway-Regular.ttf
+DataFormat:sfntData
+hasSVG:no
+FileLength:178520
+FileModTime:1678036061
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Raleway
+NameArray:0,Win,1,Raleway
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Raleway-SemiBold
+FamilyName:Raleway
+StyleName:SemiBold
+FullName:Raleway SemiBold
+MenuName:Raleway SemiBold
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:E:\_Projets\_VisualStudioCode\benoitchangeat\_raw\Dossier ONE_PAGE_V1\Document fonts\Raleway-SemiBold.ttf
+DataFormat:sfntData
+hasSVG:no
+FileLength:180492
+FileModTime:1678036061
+WeightClass:600
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Raleway SemiBold
+NameArray:0,Win,1,Raleway SemiBold
+NameArray:0,Win,16,Raleway
+%EndFont
+
