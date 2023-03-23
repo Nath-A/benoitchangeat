@@ -113,6 +113,14 @@ body {
   transform: rotate(-3deg) !important;
 }
 
+.u_color-secondary {
+  color: #FFA015 !important;
+}
+
+.u_bold {
+  font-weight: 700;
+}
+
 .header {
   display: grid;
   grid-template-columns: 1fr 4fr 1fr 1fr 5fr;
