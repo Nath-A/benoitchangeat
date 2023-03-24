@@ -10,11 +10,11 @@
     &__button
     {
         // background-color: $color-white;
-        height: 5rem;
-        width: 5rem;
+        height: 4.5rem;
+        width: 4.5rem;
         position: fixed;
         top: 5rem;
-        left: 10rem;
+        left: 9rem;
         border-radius: 50%;
         z-index: 2000;
         box-shadow: 0 1rem 3rem rgba($color-black, .1);
@@ -26,11 +26,11 @@
 
     &__background
     {
-        height: 4rem;
-        width: 4rem;
+        height: 4.5rem;
+        width: 4.5rem;
         border-radius: 100%;
         position: fixed;
-        top: 4.5rem;
+        top: 5rem;
         left: 9rem;
         background-image: radial-gradient($color-primary-60, $color-primary);
         z-index: 999;

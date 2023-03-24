@@ -1,0 +1,23 @@
+@use "../abstracts" as *;
+
+.quote
+{
+    background: url(../../img/03_citation-cosmic-environment-with-millions-colorful-bright-lights.jpg) $color-primary cover no-repeat;
+    position: relative;
+
+    // &::after
+    // {
+    //     content: "";
+    //     background-color: $color-primary;
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    // }
+
+    &__text
+    {}
+
+    &__author
+    {}
+}

@@ -1,0 +1,24 @@
+.container
+{
+
+
+
+
+    &--1400
+    {
+        max-width: 140rem;
+        margin: 0 auto;
+    }
+
+    &--video
+    {
+        max-width: 100rem;
+        margin: 0 auto;
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+}
