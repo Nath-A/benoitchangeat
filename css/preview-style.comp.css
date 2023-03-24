@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Raleway:ital,wght@0,300;0,400;0,500;0,700;0,800;0,900;1,400&display=swap");
-.button-primary, .button-primary:link, .button-primary:visited {
+.btn, .btn:link, .btn:visited {
   display: grid;
-  background-color: #2E20A7;
   border-radius: 10px;
   color: #fff;
   padding: 2rem 4rem;
@@ -10,6 +9,27 @@
   font-weight: 700;
   font-size: 1.5rem;
   border: 2px solid #fff;
+  justify-content: center;
+  width: fit-content;
+}
+.btn-primary {
+  background-color: #2E20A7;
+}
+.btn-secondary {
+  background-color: #FFA015;
+}
+
+.container--1400 {
+  max-width: 140rem;
+  margin: 0 auto;
+}
+.container--video {
+  max-width: 100rem;
+  margin: 0 auto;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -211,11 +231,11 @@ body {
   display: none;
 }
 .navigation__button {
-  height: 5rem;
-  width: 5rem;
+  height: 4.5rem;
+  width: 4.5rem;
   position: fixed;
   top: 5rem;
-  left: 10rem;
+  left: 9rem;
   border-radius: 50%;
   z-index: 2000;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
@@ -226,11 +246,11 @@ body {
   align-content: center;
 }
 .navigation__background {
-  height: 4rem;
-  width: 4rem;
+  height: 4.5rem;
+  width: 4.5rem;
   border-radius: 100%;
   position: fixed;
-  top: 4.5rem;
+  top: 5rem;
   left: 9rem;
   background-image: radial-gradient(rgba(46, 32, 167, 0.6), #2E20A7);
   z-index: 999;
@@ -321,6 +341,10 @@ body {
   transform: rotate(-135deg);
 }
 
+.quote {
+  background: url(../../img/03_citation-cosmic-environment-with-millions-colorful-bright-lights.jpg) #2E20A7 cover no-repeat;
+  position: relative;
+}
 .accroche {
   margin-top: 9rem;
 }
