@@ -1,0 +1,40 @@
+.about
+{
+    &__image
+    {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        justify-items: center;
+        align-items: start;
+
+        &__picture,
+        &__background
+        {
+            grid-row: 1;
+            grid-column: 1;
+        }
+
+        &__picture
+        {
+            z-index: 2;
+            display: block;
+            max-width: 60rem;
+            height: auto;
+            // clip-path: circle(40%);
+            clip-path: ellipse(21rem 21rem at 50% 40%);
+
+        }
+
+        &__background
+        {
+            z-index: 1;
+            position: relative;
+            width: 100%;
+            max-width: 45rem;
+        }
+    }
+
+
+
+}

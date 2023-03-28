@@ -22,6 +22,12 @@
 .container--1400 {
   max-width: 140rem;
   margin: 0 auto;
+  padding: 10rem 1rem;
+}
+.container--1200 {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 10rem 1rem;
 }
 .container--video {
   max-width: 100rem;
@@ -30,6 +36,43 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.about__image {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  align-items: start;
+}
+.about__image__picture, .about__image__background {
+  grid-row: 1;
+  grid-column: 1;
+}
+.about__image__picture {
+  z-index: 2;
+  display: block;
+  max-width: 60rem;
+  height: auto;
+  clip-path: ellipse(21rem 21rem at 50% 40%);
+}
+.about__image__background {
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  max-width: 45rem;
+}
+
+.accroche h2 {
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+}
+.grid-2x1fr {
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -46,7 +89,7 @@
 }
 
 html {
-  font-size: 63.5%;
+  font-size: 62.5%;
 }
 
 body {
@@ -94,6 +137,10 @@ body {
   font-family: "Raleway", sans-serif;
 }
 
+strong {
+  font-weight: 700;
+}
+
 .heading-primary {
   color: #fff;
   font-weight: 900;
@@ -107,7 +154,7 @@ body {
 }
 
 .heading-secondary {
-  text-align: center;
+  text-align: left;
   text-transform: uppercase;
   display: flex;
   flex-direction: column;
@@ -128,6 +175,24 @@ body {
   line-height: 0.4;
 }
 
+.quote {
+  color: #fff;
+  text-align: center;
+}
+.quote__text {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+.quote__author {
+  font-size: 1.5rem;
+  line-height: 200%;
+}
+
+p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
 .u_rotate3 {
   display: inline-block !important;
   transform: rotate(-3deg) !important;
@@ -135,10 +200,6 @@ body {
 
 .u_color-secondary {
   color: #FFA015 !important;
-}
-
-.u_bold {
-  font-weight: 700;
 }
 
 .header {
@@ -342,11 +403,39 @@ body {
 }
 
 .quote {
-  background: url(../../img/03_citation-cosmic-environment-with-millions-colorful-bright-lights.jpg) #2E20A7 cover no-repeat;
+  display: grid;
+  justify-content: center;
+  align-content: center;
   position: relative;
+  min-height: 15rem;
 }
-.accroche {
-  margin-top: 9rem;
+.quote::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(../../img/03_citation-cosmic-environment-with-millions-colorful-bright-lights.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+.quote::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #2E20A7;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: multiply;
+  z-index: 2;
+}
+.quote__text, .quote__author {
+  position: relative;
+  z-index: 999;
 }
 
 /*# sourceMappingURL=preview-style.comp.css.map */
