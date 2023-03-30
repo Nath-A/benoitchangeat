@@ -7,4 +7,10 @@
         grid-template-columns: repeat(2, 1fr);
         column-gap: 2rem;
     }
+
+    &-11x1fr
+    {
+        grid-template-columns: repeat(11, 1fr);
+        column-gap: 2rem;
+    }
 }

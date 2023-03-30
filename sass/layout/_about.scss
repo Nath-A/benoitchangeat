@@ -35,6 +35,15 @@
         }
     }
 
+    &__coach
+    {
+        &__button-container
+        {
+            display: grid;
+            justify-items: end;
+            margin-top: 2rem;
+        }
+    }
 
 
 }
