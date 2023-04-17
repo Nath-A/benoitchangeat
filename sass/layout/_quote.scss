@@ -4,7 +4,7 @@
 {
     @include grid-center;
     position: relative;
-    min-height: 15rem;
+    min-height: 20rem;
 
     &::before
     {
@@ -16,7 +16,7 @@
         background: url(../img/03_citation-cosmic-environment-with-millions-colorful-bright-lights.jpg);
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: left bottom;
         height: 100%;
         width: 100%;
         z-index: 1;

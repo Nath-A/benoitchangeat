@@ -4,4 +4,22 @@
     {
         text-align: center;
     }
+
+    &__infographic
+    {
+        display: grid;
+        grid-template-columns: 1fr 4fr 1fr;
+        margin: 10rem 0;
+
+        img
+        {
+            grid-column: 2;
+        }
+    }
+
+    &__btn
+    {
+        margin-top: 2rem;
+    }
+
 }
