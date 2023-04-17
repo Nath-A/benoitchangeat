@@ -22,12 +22,12 @@
 .container--1400 {
   max-width: 140rem;
   margin: 0 auto;
-  padding: 10rem 1rem;
+  padding: 5rem 1rem;
 }
 .container--1200 {
   max-width: 120rem;
   margin: 0 auto;
-  padding: 10rem 4rem;
+  padding: 5rem 4rem;
 }
 .container--video {
   max-width: 100rem;
@@ -38,6 +38,12 @@
   align-items: center;
 }
 
+.about > :first-child {
+  padding-bottom: 0;
+}
+.about > :nth-child(2) {
+  padding-top: 0;
+}
 .about__image {
   display: grid;
   grid-template-columns: 1fr;
@@ -76,17 +82,28 @@
   margin-top: 2rem;
 }
 .about__arrow {
-  grid-column: 4/span 4;
-  display: flex;
+  grid-column: 4/span 5;
+  display: grid;
+  justify-self: center;
+  grid-template-columns: 1fr 2fr;
 }
-.about__arrow p {
-  text-transform: uppercase;
+.about__arrow__text {
   display: flex;
   flex-direction: column;
   text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: initial;
+}
+.about__arrow__text span {
+  font-size: 3rem;
 }
 .about__arrow img {
   width: 20rem;
+  grid-row: 2;
+  grid-column: 1/span 2;
+  justify-self: center;
 }
 .about__advantages {
   grid-column: 7/span 5;
@@ -133,6 +150,17 @@
 
 .accroche h2 {
   text-align: center;
+}
+.accroche__infographic {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  margin: 10rem 0;
+}
+.accroche__infographic img {
+  grid-column: 2;
+}
+.accroche__btn {
+  margin-top: 2rem;
 }
 
 .grid {
@@ -234,16 +262,16 @@ strong {
 }
 .heading-secondary--up {
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 2.4rem;
   line-height: 2;
 }
 .heading-secondary--main {
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 6rem;
 }
 .heading-secondary--sub {
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 5rem;
   color: #FFA015;
   line-height: 0.4;
 }
@@ -254,16 +282,16 @@ strong {
 }
 .quote__text {
   text-transform: uppercase;
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 .quote__author {
-  font-size: 1.5rem;
+  font-size: 2rem;
   line-height: 200%;
 }
 
 p {
-  font-size: 1.5rem;
-  line-height: 1.5;
+  font-size: 1.8rem;
+  line-height: 1.8;
 }
 
 .u_rotate3 {
@@ -485,7 +513,7 @@ p {
   justify-content: center;
   align-content: center;
   position: relative;
-  min-height: 15rem;
+  min-height: 20rem;
 }
 .quote::before {
   content: "";
@@ -496,7 +524,7 @@ p {
   background: url(../img/03_citation-cosmic-environment-with-millions-colorful-bright-lights.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left bottom;
   height: 100%;
   width: 100%;
   z-index: 1;
