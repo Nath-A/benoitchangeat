@@ -8,31 +8,18 @@
 
     &::before
     {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
+        @include background-image;
         background: url(../../img/03_citation-cosmic-environment-with-millions-colorful-bright-lights.jpg);
         background: url(../img/03_citation-cosmic-environment-with-millions-colorful-bright-lights.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: left bottom;
-        height: 100%;
-        width: 100%;
-        z-index: 1;
+        background-position: left center;
     }
 
     &::after
     {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
+        @include background-filter;
         background-color: $color-primary;
-        width: 100%;
-        height: 100%;
         mix-blend-mode: multiply;
-        z-index: 2;
+
     }
 
     &__text,

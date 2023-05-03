@@ -83,3 +83,17 @@ p
     font-size: 1.8rem;
     line-height: 1.8;
 }
+
+.trust__item
+{
+    &__heading
+    {
+        font-size: 2.5rem;
+
+    }
+
+    // &__text
+    // {
+    //     font-size: 1.5rem;
+    // }
+}

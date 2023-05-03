@@ -1,6 +1,35 @@
+@use "../abstracts/variables" as *;
+
 @mixin grid-center
 {
     display: grid;
     justify-content: center;
     align-content: center;
+}
+
+@mixin background-image
+{
+    background-size: cover;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    // background-position: left center;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+@mixin background-filter
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $color-primary;
+    width: 100%;
+    height: 100%;
+    // mix-blend-mode: darken;
+    z-index: 2;
 }

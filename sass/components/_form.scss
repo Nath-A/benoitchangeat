@@ -1,0 +1,29 @@
+@use "../abstracts" as *;
+
+.form
+{
+    display: flex;
+    flex-direction: column;
+
+    &__input
+    {
+        border: 2px solid $color-black;
+        border-radius: 1.2rem;
+        width: 45rem;
+        padding: 1.5rem 1rem;
+        margin-bottom: 1.5rem;
+
+        // &:not(:last-of-type)
+        // {
+        //     margin-bottom: 1rem;
+        // }
+        &::placeholder
+        {
+            color: $color-black;
+            font-family: $font-family;
+        }
+    }
+
+    &__btn
+    {}
+}
