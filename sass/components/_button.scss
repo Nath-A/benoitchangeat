@@ -31,4 +31,13 @@
     {
         background-color: $color-secondary;
     }
+
+    &--icon
+    {
+        grid-template-columns: auto 1fr;
+        column-gap: 1rem;
+        padding: 1rem 1.5rem !important;
+        align-items: center;
+        margin: 0 auto;
+    }
 }
