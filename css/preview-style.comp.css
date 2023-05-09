@@ -512,7 +512,7 @@ p {
   top: 5rem;
   left: 9rem;
   background-image: radial-gradient(rgba(46, 32, 167, 0.6), #2E20A7);
-  z-index: 999;
+  z-index: 1400;
   transition: transform 0.8s;
 }
 .navigation__nav {
