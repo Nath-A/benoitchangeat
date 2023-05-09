@@ -1,11 +1,14 @@
 .gift
 {
     min-height: 100vh;
+    align-items: center;
 
     &__cta
     {
         &__description
-        {}
+        {
+            margin: 3rem 0;
+        }
 
         &__btn
         {

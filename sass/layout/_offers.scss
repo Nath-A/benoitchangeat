@@ -1,0 +1,72 @@
+@use "../abstracts" as *;
+
+.offers
+{
+    position: relative;
+    z-index: 999;
+
+    &::before
+    {
+        @include background-image;
+        background-image: url(../../img/08_cosmic-environment-with-millions-colorful-bright-lights.jpg);
+        background-image: url(../img/08_cosmic-environment-with-millions-colorful-bright-lights.jpg);
+        background-position: center;
+    }
+
+    & > *
+    {
+        position: relative;
+        z-index: 10;
+    }
+
+    &::after
+    {
+        @include background-filter;
+        mix-blend-mode: darken;
+    }
+
+    &__heading
+    {
+        grid-column: 1 / span 3;
+        text-align: center;
+        color: $color-white;
+
+        &__underline
+        {
+            display: grid;
+            justify-content: center;
+
+            img
+            {
+                // width: 100%;
+                transform: translateY(-2.5rem);
+                position: relative;
+                z-index: -1;
+            }
+        }
+    }
+
+    &__item
+    {
+        background-color: $color-white;
+        border-radius: 1rem;
+        padding: 3rem 8rem;
+
+        &__img
+        {
+            width: 20rem;
+            display: block;
+            margin: 0 auto;
+        }
+
+        &__heading
+        {
+            margin-top: 2.5rem;
+        }
+
+        &__text__paragraph:not(:last-of-type)
+        {
+            margin-bottom: 0.8rem;
+        }
+    }
+}
