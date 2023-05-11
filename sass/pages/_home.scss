@@ -1,0 +1,458 @@
+@use "../abstracts" as *;
+
+
+//? ---------------------------------- ACCROCHE
+.accroche
+{
+    h2
+    {
+        text-align: center;
+    }
+
+    &__infographic
+    {
+        display: grid;
+        grid-template-columns: 1fr 4fr 1fr;
+        margin: 10rem 0;
+
+        img
+        {
+            grid-column: 2;
+        }
+    }
+
+    &__btn
+    {
+        margin-top: 2rem;
+    }
+
+}
+
+//? ---------------------------------- QUOTE
+.quote
+{
+    @include grid-center;
+    position: relative;
+    min-height: 20rem;
+
+    &::before
+    {
+        @include background-image;
+        background: url(../../img/03_citation-cosmic-environment-with-millions-colorful-bright-lights.jpg);
+        background: url(../img/03_citation-cosmic-environment-with-millions-colorful-bright-lights.jpg);
+        background-position: left center;
+    }
+
+    &::after
+    {
+        @include background-filter;
+        background-color: $color-primary;
+        mix-blend-mode: multiply;
+
+    }
+
+    &__text,
+    &__author
+    {
+        position: relative;
+        z-index: 999;
+    }
+}
+
+//? ---------------------------------- ABOUT
+
+.about
+{
+    & > :first-child
+    {
+        padding-bottom: 0;
+    }
+
+    & > :nth-child(2)
+    {
+        padding-top: 0;
+    }
+
+    &__image
+    {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        justify-items: center;
+        align-items: start;
+
+        &__picture,
+        &__background
+        {
+            grid-row: 1;
+            grid-column: 1;
+        }
+
+        &__picture
+        {
+            z-index: 2;
+            display: block;
+            max-width: 60rem;
+            height: auto;
+            // clip-path: circle(40%);
+            clip-path: ellipse(21rem 21rem at 50% 40%);
+
+        }
+
+        &__background
+        {
+            z-index: 1;
+            position: relative;
+            width: 100%;
+            max-width: 45rem;
+        }
+    }
+
+    &__heading,
+    &__coaching
+    {
+        grid-column: 1 / span 5;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__heading span:last-of-type
+    {
+        margin-left: 5rem;
+    }
+
+    &__coach
+    {
+        &__button-container
+        {
+            display: grid;
+            justify-items: end;
+            margin-top: 2rem;
+        }
+    }
+
+    &__arrow
+    {
+        grid-column: 4 / span 5;
+        display: grid;
+        justify-self: center;
+        grid-template-columns: 1fr 2fr;
+        // grid-template-rows: repeat(2, auto);
+
+        &__text
+        {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: initial;
+
+
+            span
+            {
+                font-size: 3rem;
+            }
+        }
+
+        img
+        {
+            width: 20rem;
+            grid-row: 2;
+            grid-column: 1 / span 2;
+            justify-self: center;
+        }
+    }
+
+    &__advantages
+    {
+        grid-column: 7 / span 5;
+        grid-row: 2 / 3;
+
+        &__item
+        {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: center;
+            column-gap: 1rem;
+
+            &__img
+            {
+                width: 5rem;
+            }
+
+            &__text
+            {
+                color: $color-white;
+                border-radius: 1rem;
+                padding: 1.5rem 2rem;
+                vertical-align: bottom;
+                align-self: center;
+
+            }
+
+            &--1 p
+            {
+                background-color: $color-primary;
+
+            }
+
+            &--2 p
+            {
+                background-color: $color-primary-90;
+
+            }
+
+            &--3 p
+            {
+                background-color: $color-primary-80;
+
+            }
+
+            &--4 p
+            {
+                background-color: $color-primary-70;
+
+            }
+
+            &--5 p
+            {
+                background-color: $color-primary-60;
+
+            }
+        }
+
+        &__item:not(:last-child)
+        {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__btn
+    {
+
+        grid-column: 2 / span 2;
+        justify-self: end;
+        align-self: flex-end;
+    }
+}
+
+//? ----------------------------------- TRUST
+.trust
+{
+    position: relative;
+    z-index: 999;
+
+    &::before
+    {
+
+        @include background-image;
+        background-image: url(../../img/06_jack-b-SxhNnU46jAc-unsplash.jpg);
+        background-image: url(../img/06_jack-b-SxhNnU46jAc-unsplash.jpg);
+        background-position: left bottom;
+
+    }
+
+    &::after
+    {
+        @include background-filter;
+        mix-blend-mode: darken;
+    }
+
+    & > *
+    {
+        position: relative;
+        z-index: 10;
+    }
+
+    .grid
+    {
+        row-gap: 6rem;
+        column-gap: 10rem;
+
+    }
+
+    &__heading
+    {
+        text-align: center;
+        color: $color-white;
+        grid-column: span 2;
+        justify-content: center;
+        //! TO RESOLVE ! 
+        // .heading__underline
+        // {
+
+
+        //     img
+        //     {}
+        // }
+
+
+    }
+
+    &__item
+    {
+        display: grid;
+        // grid-template-columns: 1fr 3fr;
+        grid-template-columns: auto 1fr;
+        column-gap: 2rem;
+        align-content: center;
+        justify-items: start;
+        align-items: start;
+
+        &__img
+        {
+            width: 10rem;
+            max-height: 10rem;
+            grid-row: span 2;
+            align-self: center;
+        }
+
+        &__heading
+        {
+            color: $color-white;
+        }
+
+        &__text
+        {
+            color: $color-white;
+        }
+    }
+}
+
+//? ---------------------------------- GIFT
+.gift
+{
+    min-height: 100vh;
+    align-items: center;
+
+    &__cta
+    {
+        &__description
+        {
+            margin: 3rem 0;
+        }
+
+        &__btn
+        {
+            grid-template-columns: 1fr 5rem;
+            position: relative;
+            column-gap: 1rem;
+            width: 45rem;
+
+
+            img
+            {
+                width: 5rem;
+                position: absolute;
+                transform: translate(30rem, 1.7rem);
+                // position: relative;
+            }
+        }
+    }
+
+    &__img
+    {
+
+        // background-image: url(../../img/07_GuideCTA-ebook_mockup.png);
+        // background-image: url(../img/07_GuideCTA-ebook_mockup.png);
+        // background-size: cover;
+        // background-repeat: no-repeat;
+        &__item
+        {
+
+            width: 100%;
+            height: auto;
+        }
+    }
+
+
+}
+
+//? ---------------------------------- OFFERS
+.offers
+{
+    position: relative;
+    z-index: 999;
+
+    &::before
+    {
+        @include background-image;
+        background-image: url(../../img/08_cosmic-environment-with-millions-colorful-bright-lights.jpg);
+        background-image: url(../img/08_cosmic-environment-with-millions-colorful-bright-lights.jpg);
+        background-position: center;
+    }
+
+    & > *
+    {
+        position: relative;
+        z-index: 10;
+    }
+
+    &::after
+    {
+        @include background-filter;
+        mix-blend-mode: darken;
+    }
+
+    &__heading
+    {
+        grid-column: 1 / span 3;
+        text-align: center;
+        color: $color-white;
+
+        &__underline
+        {
+            display: grid;
+            justify-content: center;
+
+            img
+            {
+                // width: 100%;
+                transform: translateY(-2.5rem);
+                position: relative;
+                z-index: -1;
+            }
+        }
+    }
+
+    &__item
+    {
+        background-color: $color-white;
+        border-radius: 1rem;
+        padding: 3rem 8rem;
+        box-shadow: 0rem 0rem 1.5rem 0.5rem rgba($color-black, 0.15);
+
+
+
+        &__img
+        {
+            width: 20rem;
+            display: block;
+            margin: 0 auto;
+        }
+
+        &__heading
+        {
+            margin: 2.5rem 0;
+        }
+
+        &__text
+        {
+
+            &__paragraph:not(:last-of-type)
+            {
+                margin-bottom: 1.5rem;
+            }
+        }
+
+
+
+        &__btn
+        {
+            margin-top: 3rem;
+            align-self: end;
+        }
+    }
+}
