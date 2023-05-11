@@ -27,6 +27,30 @@
   margin: 0 auto;
 }
 
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.form__input {
+  border: 2px solid #000;
+  border-radius: 1.2rem;
+  width: 45rem;
+  padding: 1.5rem 1rem;
+  margin-bottom: 1.5rem;
+}
+.form__input::placeholder {
+  color: #000;
+  font-family: "Raleway", sans-serif;
+}
+.list__item {
+  list-style: disc outside;
+  margin-left: 1.5rem;
+  font-size: 1.5rem;
+}
+.list :not(last-child) {
+  margin-bottom: 1rem;
+}
+
 .container--1400 {
   max-width: 140rem;
   margin: 0 auto;
@@ -51,21 +75,6 @@
   align-items: center;
 }
 
-.form {
-  display: flex;
-  flex-direction: column;
-}
-.form__input {
-  border: 2px solid #000;
-  border-radius: 1.2rem;
-  width: 45rem;
-  padding: 1.5rem 1rem;
-  margin-bottom: 1.5rem;
-}
-.form__input::placeholder {
-  color: #000;
-  font-family: "Raleway", sans-serif;
-}
 .grid {
   display: grid;
 }
@@ -80,164 +89,6 @@
 .grid-3x1fr {
   grid-template-columns: repeat(3, 1fr);
   column-gap: 2rem;
-}
-
-.list__item {
-  list-style: disc outside;
-  margin-left: 1.5rem;
-  font-size: 1.5rem;
-}
-.list :not(last-child) {
-  margin-bottom: 1rem;
-}
-
-.about > :first-child {
-  padding-bottom: 0;
-}
-.about > :nth-child(2) {
-  padding-top: 0;
-}
-.about__image {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  justify-items: center;
-  align-items: start;
-}
-.about__image__picture, .about__image__background {
-  grid-row: 1;
-  grid-column: 1;
-}
-.about__image__picture {
-  z-index: 2;
-  display: block;
-  max-width: 60rem;
-  height: auto;
-  clip-path: ellipse(21rem 21rem at 50% 40%);
-}
-.about__image__background {
-  z-index: 1;
-  position: relative;
-  width: 100%;
-  max-width: 45rem;
-}
-.about__heading, .about__coaching {
-  grid-column: 1/span 5;
-  display: flex;
-  flex-direction: column;
-}
-.about__heading span:last-of-type {
-  margin-left: 5rem;
-}
-.about__coach__button-container {
-  display: grid;
-  justify-items: end;
-  margin-top: 2rem;
-}
-.about__arrow {
-  grid-column: 4/span 5;
-  display: grid;
-  justify-self: center;
-  grid-template-columns: 1fr 2fr;
-}
-.about__arrow__text {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: initial;
-}
-.about__arrow__text span {
-  font-size: 3rem;
-}
-.about__arrow img {
-  width: 20rem;
-  grid-row: 2;
-  grid-column: 1/span 2;
-  justify-self: center;
-}
-.about__advantages {
-  grid-column: 7/span 5;
-  grid-row: 2/3;
-}
-.about__advantages__item {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-  column-gap: 1rem;
-}
-.about__advantages__item__img {
-  width: 5rem;
-}
-.about__advantages__item__text {
-  color: #fff;
-  border-radius: 1rem;
-  padding: 1.5rem 2rem;
-  vertical-align: bottom;
-  align-self: center;
-}
-.about__advantages__item--1 p {
-  background-color: #2E20A7;
-}
-.about__advantages__item--2 p {
-  background-color: rgba(46, 32, 167, 0.9);
-}
-.about__advantages__item--3 p {
-  background-color: rgba(46, 32, 167, 0.8);
-}
-.about__advantages__item--4 p {
-  background-color: rgba(46, 32, 167, 0.7);
-}
-.about__advantages__item--5 p {
-  background-color: rgba(46, 32, 167, 0.6);
-}
-.about__advantages__item:not(:last-child) {
-  margin-bottom: 1.5rem;
-}
-.about__btn {
-  grid-column: 2/span 2;
-  justify-self: end;
-  align-self: flex-end;
-}
-
-.accroche h2 {
-  text-align: center;
-}
-.accroche__infographic {
-  display: grid;
-  grid-template-columns: 1fr 4fr 1fr;
-  margin: 10rem 0;
-}
-.accroche__infographic img {
-  grid-column: 2;
-}
-.accroche__btn {
-  margin-top: 2rem;
-}
-
-.gift {
-  min-height: 100vh;
-  align-items: center;
-}
-.gift__cta__description {
-  margin: 3rem 0;
-}
-.gift__cta__btn {
-  grid-template-columns: 1fr 5rem;
-  position: relative;
-  column-gap: 1rem;
-  width: 45rem;
-}
-.gift__cta__btn img {
-  width: 5rem;
-  position: absolute;
-  transform: translate(30rem, 1.7rem);
-}
-.gift__img__item {
-  width: 100%;
-  height: auto;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -600,6 +451,257 @@ p {
   transform: rotate(-135deg);
 }
 
+.accroche h2 {
+  text-align: center;
+}
+.accroche__infographic {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  margin: 10rem 0;
+}
+.accroche__infographic img {
+  grid-column: 2;
+}
+.accroche__btn {
+  margin-top: 2rem;
+}
+
+.quote {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  position: relative;
+  min-height: 20rem;
+}
+.quote::before {
+  background-size: cover;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background: url(../../img/03_citation-cosmic-environment-with-millions-colorful-bright-lights.jpg);
+  background: url(../img/03_citation-cosmic-environment-with-millions-colorful-bright-lights.jpg);
+  background-position: left center;
+}
+.quote::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #2E20A7;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: #2E20A7;
+  mix-blend-mode: multiply;
+}
+.quote__text, .quote__author {
+  position: relative;
+  z-index: 999;
+}
+
+.about > :first-child {
+  padding-bottom: 0;
+}
+.about > :nth-child(2) {
+  padding-top: 0;
+}
+.about__image {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  align-items: start;
+}
+.about__image__picture, .about__image__background {
+  grid-row: 1;
+  grid-column: 1;
+}
+.about__image__picture {
+  z-index: 2;
+  display: block;
+  max-width: 60rem;
+  height: auto;
+  clip-path: ellipse(21rem 21rem at 50% 40%);
+}
+.about__image__background {
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  max-width: 45rem;
+}
+.about__heading, .about__coaching {
+  grid-column: 1/span 5;
+  display: flex;
+  flex-direction: column;
+}
+.about__heading span:last-of-type {
+  margin-left: 5rem;
+}
+.about__coach__button-container {
+  display: grid;
+  justify-items: end;
+  margin-top: 2rem;
+}
+.about__arrow {
+  grid-column: 4/span 5;
+  display: grid;
+  justify-self: center;
+  grid-template-columns: 1fr 2fr;
+}
+.about__arrow__text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: initial;
+}
+.about__arrow__text span {
+  font-size: 3rem;
+}
+.about__arrow img {
+  width: 20rem;
+  grid-row: 2;
+  grid-column: 1/span 2;
+  justify-self: center;
+}
+.about__advantages {
+  grid-column: 7/span 5;
+  grid-row: 2/3;
+}
+.about__advantages__item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  column-gap: 1rem;
+}
+.about__advantages__item__img {
+  width: 5rem;
+}
+.about__advantages__item__text {
+  color: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem 2rem;
+  vertical-align: bottom;
+  align-self: center;
+}
+.about__advantages__item--1 p {
+  background-color: #2E20A7;
+}
+.about__advantages__item--2 p {
+  background-color: rgba(46, 32, 167, 0.9);
+}
+.about__advantages__item--3 p {
+  background-color: rgba(46, 32, 167, 0.8);
+}
+.about__advantages__item--4 p {
+  background-color: rgba(46, 32, 167, 0.7);
+}
+.about__advantages__item--5 p {
+  background-color: rgba(46, 32, 167, 0.6);
+}
+.about__advantages__item:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.about__btn {
+  grid-column: 2/span 2;
+  justify-self: end;
+  align-self: flex-end;
+}
+
+.trust {
+  position: relative;
+  z-index: 999;
+}
+.trust::before {
+  background-size: cover;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background-image: url(../../img/06_jack-b-SxhNnU46jAc-unsplash.jpg);
+  background-image: url(../img/06_jack-b-SxhNnU46jAc-unsplash.jpg);
+  background-position: left bottom;
+}
+.trust::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #2E20A7;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  mix-blend-mode: darken;
+}
+.trust > * {
+  position: relative;
+  z-index: 10;
+}
+.trust .grid {
+  row-gap: 6rem;
+  column-gap: 10rem;
+}
+.trust__heading {
+  text-align: center;
+  color: #fff;
+  grid-column: span 2;
+  justify-content: center;
+}
+.trust__item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 2rem;
+  align-content: center;
+  justify-items: start;
+  align-items: start;
+}
+.trust__item__img {
+  width: 10rem;
+  max-height: 10rem;
+  grid-row: span 2;
+  align-self: center;
+}
+.trust__item__heading {
+  color: #fff;
+}
+.trust__item__text {
+  color: #fff;
+}
+
+.gift {
+  min-height: 100vh;
+  align-items: center;
+}
+.gift__cta__description {
+  margin: 3rem 0;
+}
+.gift__cta__btn {
+  grid-template-columns: 1fr 5rem;
+  position: relative;
+  column-gap: 1rem;
+  width: 45rem;
+}
+.gift__cta__btn img {
+  width: 5rem;
+  position: absolute;
+  transform: translate(30rem, 1.7rem);
+}
+.gift__img__item {
+  width: 100%;
+  height: auto;
+}
+
 .offers {
   position: relative;
   z-index: 999;
@@ -667,108 +769,6 @@ p {
 .offers__item__btn {
   margin-top: 3rem;
   align-self: end;
-}
-
-.quote {
-  display: grid;
-  justify-content: center;
-  align-content: center;
-  position: relative;
-  min-height: 20rem;
-}
-.quote::before {
-  background-size: cover;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-repeat: no-repeat;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-  background: url(../../img/03_citation-cosmic-environment-with-millions-colorful-bright-lights.jpg);
-  background: url(../img/03_citation-cosmic-environment-with-millions-colorful-bright-lights.jpg);
-  background-position: left center;
-}
-.quote::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #2E20A7;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  background-color: #2E20A7;
-  mix-blend-mode: multiply;
-}
-.quote__text, .quote__author {
-  position: relative;
-  z-index: 999;
-}
-
-.trust {
-  position: relative;
-  z-index: 999;
-}
-.trust::before {
-  background-size: cover;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-repeat: no-repeat;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-  background-image: url(../../img/06_jack-b-SxhNnU46jAc-unsplash.jpg);
-  background-image: url(../img/06_jack-b-SxhNnU46jAc-unsplash.jpg);
-  background-position: left bottom;
-}
-.trust::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #2E20A7;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  mix-blend-mode: darken;
-}
-.trust > * {
-  position: relative;
-  z-index: 10;
-}
-.trust .grid {
-  row-gap: 6rem;
-  column-gap: 10rem;
-}
-.trust__heading {
-  text-align: center;
-  color: #fff;
-  grid-column: span 2;
-  justify-content: center;
-}
-.trust__item {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  column-gap: 2rem;
-  align-content: center;
-  justify-items: start;
-  align-items: start;
-}
-.trust__item__img {
-  width: 10rem;
-  max-height: 10rem;
-  grid-row: span 2;
-  align-self: center;
-}
-.trust__item__heading {
-  color: #fff;
-}
-.trust__item__text {
-  color: #fff;
 }
 
 /*# sourceMappingURL=preview-style.comp.css.map */
