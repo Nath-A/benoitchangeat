@@ -60,6 +60,8 @@ strong
     }
 }
 
+//? ---------------------------------- QUOTE
+
 .quote
 {
     color: $color-white;
@@ -84,6 +86,8 @@ p
     line-height: 1.8;
 }
 
+//? ---------------------------------- TRUST
+
 .trust__item
 {
     &__heading
@@ -93,6 +97,8 @@ p
     }
 
 }
+
+//? ---------------------------------- OFFERS
 
 .offers__item
 {
@@ -129,4 +135,14 @@ p
         }
     }
 
+}
+
+//? ---------------------------------- FAQ
+.faq__item
+{
+    &__question
+    {
+        font-weight: 400;
+        font-size: 1.5rem;
+    }
 }
