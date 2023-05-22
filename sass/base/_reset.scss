@@ -20,6 +20,8 @@ html
 {
     // This defines what 1rem is > 1rem = 10px; 10px/16px = 62.5%
     font-size: 62.5%;
+    font-variant-numeric: lining-nums;
+
 }
 
 body
@@ -67,4 +69,14 @@ table
 {
     border-collapse: collapse;
     border-spacing: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+    font-weight: 400;
 }

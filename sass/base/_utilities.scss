@@ -14,29 +14,12 @@
 
 .u_btn-right
 {
-    display: grid;
-    justify-items: end;
+    display: grid !important;
+    justify-items: end !important;
 }
 
-// .u_bold
-// {
-//     font-weight: 700;
-// }
-
-// .u_underlineSVGparent
-// {
-//     position: relative;
-
-// }
-
-// .u_underlineSVG
-// {
-//     display: flex;
-//     transform: translateY(-4.5rem);
-// }
-
-// .u_center
-// {
-//     display: grid;
-
-// }
+.u_underline-svg
+{
+    display: grid !important;
+    justify-content: center !important;
+}
