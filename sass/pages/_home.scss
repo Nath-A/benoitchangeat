@@ -5,9 +5,10 @@
 //? ---------------------------------- ACCROCHE
 .accroche
 {
-    h2
+
+    &__heading
     {
-        text-align: center;
+        align-items: center;
     }
 
     &__infographic
@@ -144,7 +145,6 @@
         {
             display: flex;
             flex-direction: column;
-            text-align: center;
             text-transform: uppercase;
             font-size: 2rem;
             font-weight: 700;
@@ -276,18 +276,12 @@
 
     &__heading
     {
-        text-align: center;
+
         color: $color-white;
         grid-column: span 2;
         justify-content: center;
-        //! TO RESOLVE ! 
-        // .heading__underline
-        // {
-
-
-        //     img
-        //     {}
-        // }
+        text-align: center;
+        flex-direction: row;
 
 
     }
@@ -400,8 +394,9 @@
     &__heading
     {
         grid-column: 1 / span 3;
-        text-align: center;
         color: $color-white;
+        flex-direction: row;
+        justify-content: center;
 
         &__underline
         {
@@ -470,28 +465,40 @@
     {
         grid-column: 1 / span 2;
         flex-direction: row;
-        text-align: center;
         justify-content: center;
     }
 
     &__item
     {
-        &__question
+        //! CHEAT CODE
+        border: 2px solid $color-black;
+        border-radius: 1rem;
+        padding: 2rem 1rem;
+
+
+        &__question,
+        &__answer
         {
             width: 100%;
-            border: 2px solid $color-black;
-            border-radius: 1rem;
+            //! CHEAT CODE
+            border: none;
+            // border: 2px solid $color-black;
+            // border-radius: 1rem;
+
             display: grid;
             grid-template-columns: 1fr auto;
-            padding: 2rem 1rem;
-            cursor: pointer;
+            padding: 1rem 1rem;
+
+            // cursor: pointer;
 
         }
 
-        &__answer
+        &__toggle,
+        .fa
         {
             display: none;
         }
+
     }
 
     &__btn
@@ -572,7 +579,7 @@
 
             &__status
             {
-                margin-bottom: 1rem;
+                margin-bottom: 2rem;
 
             }
         }
@@ -580,5 +587,72 @@
 
         &__text
         {}
+    }
+}
+
+//? ----------------------------------- CALL
+.call
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15rem;
+
+    &__icon
+    {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        z-index: -1;
+        transform: translate(-50%, -50%);
+        height: 50rem;
+    }
+
+    &__heading
+    {
+        padding-top: 25rem;
+    }
+
+    &__text
+    {
+        margin-top: 5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+//? ----------------------------------- NEWSLETTER
+.newsletter
+{
+    background-image: url(../../img/12_newsletter-paul-skorupskas-7KLa-xLbSXA-unsplash.jpg);
+    background-image: url(../img/12_newsletter-paul-skorupskas-7KLa-xLbSXA-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: cover;
+    padding: 5rem 0;
+
+    &__text
+    {
+        color: $color-white;
+    }
+
+    &__baseline
+    {}
+
+    &__heading
+    {}
+
+    &__paragraph
+    {}
+
+    &__form
+    {
+        align-items: flex-end;
+
+        &__btn
+        {
+            border: none;
+
+        }
     }
 }

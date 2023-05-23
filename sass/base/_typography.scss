@@ -60,6 +60,12 @@ strong
     }
 }
 
+//? ---------------------------------- ACCROCHE
+.accroche__heading
+{
+    text-align: center;
+}
+
 //? ---------------------------------- QUOTE
 
 .quote
@@ -86,6 +92,12 @@ p
     line-height: 1.8;
 }
 
+//? ---------------------------------- ABOUT
+.about__coach__text
+{
+    text-align: center;
+}
+
 //? ---------------------------------- TRUST
 
 .trust__item
@@ -94,7 +106,7 @@ p
     {
         font-size: 2.5rem;
         font-weight: 700;
-
+        text-align: center;
     }
 
 }
@@ -139,12 +151,34 @@ p
 }
 
 //? ---------------------------------- FAQ
-.faq__item
+.faq
 {
-    &__question
+    &__heading
     {
-        font-weight: 400;
-        // font-size: 1.5rem;
+        text-align: center;
+    }
+
+    &__item
+    {
+
+        &__question,
+        &__answer
+        {
+            font-size: 1.4rem;
+        }
+
+        &__question
+        {
+            font-weight: 500;
+            text-transform: uppercase;
+
+        }
+
+        &__answer
+        {
+            font-weight: 400;
+
+        }
     }
 }
 
@@ -173,5 +207,69 @@ p
     &__text
     {
         font-size: 1.5rem;
+    }
+}
+
+//? ----------------------------------- CALL
+.call
+{
+
+    &__heading
+    {
+        text-align: center;
+
+        .heading-secondary--main
+        {
+
+            text-indent: -14rem;
+        }
+
+        .heading-secondary--sub
+        {
+            text-indent: 14rem;
+
+        }
+
+    }
+
+    &__text
+    {
+        text-align: center;
+    }
+}
+
+//? ----------------------------------- CALL
+.newsletter
+{
+    &__baseline
+    {
+        text-transform: uppercase;
+        font-size: 1.6rem;
+
+    }
+
+    &__heading
+    {}
+
+    &__paragraph
+    {}
+
+    &__form
+    {}
+}
+
+//? ----------------------------------- FOOTER
+.footer
+{
+
+    & > *
+    {
+
+        font-size: 1.2rem;
+    }
+
+    &__copyright
+    {
+        font-weight: 700;
     }
 }

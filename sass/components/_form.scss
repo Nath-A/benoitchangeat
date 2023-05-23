@@ -12,18 +12,37 @@
         width: 45rem;
         padding: 1.5rem 1rem;
         margin-bottom: 1.5rem;
+        height: 5rem;
 
-        // &:not(:last-of-type)
-        // {
-        //     margin-bottom: 1rem;
-        // }
         &::placeholder
         {
             color: $color-black;
             font-family: $font-family;
         }
+
+        &--black
+        {
+            border-color: $color-white;
+            background-color: rgba($color-black, 0.6);
+            color: $color-white;
+
+            &::placeholder
+            {
+                color: $color-white;
+                font-family: $font-family;
+            }
+        }
+
+
     }
 
     &__btn
-    {}
+    {
+        height: 5rem;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        padding: 1% 3%;
+    }
+
 }
