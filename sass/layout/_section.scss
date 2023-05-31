@@ -1,0 +1,16 @@
+@use "../abstracts" as *;
+
+section
+{
+    padding: 5rem 4rem;
+
+    @include responsive(laptop-l)
+    {
+        padding: 4rem 3rem;
+    }
+
+    // @include responsive(laptop)
+    // {
+    //     padding: 4rem 3rem;
+    // }
+}

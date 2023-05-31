@@ -6,9 +6,7 @@
     display: grid;
     grid-template-columns: 1fr 4fr 1fr 1fr 5fr;
     grid-template-rows: repeat(8, 1fr); // TODO à mettre en auto sous 1600 px ou minmax ! 
-    height: 100vh;
-    max-height: 100vh;
-
+    min-height: 100vh;
 
     &__background-color
     {
@@ -23,6 +21,10 @@
         grid-row: 1/ span 4;
         align-self: center;
         justify-self: center;
+        width: 4rem;
+
+        @include responsive(laptop-l)
+        {}
 
     }
 

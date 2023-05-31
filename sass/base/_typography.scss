@@ -12,6 +12,22 @@ strong
     font-weight: 700;
 }
 
+p
+{
+    font-size: 1.8rem;
+    line-height: 1.8;
+
+    // @include responsive(laptop-l)
+    // {
+    //     font-size: 1.5rem;
+    // }
+
+    @include responsive(laptop)
+    {
+        font-size: 1.3rem;
+    }
+}
+
 .heading-primary
 {
     color: $color-white;
@@ -84,12 +100,6 @@ strong
         font-size: 2rem;
         line-height: 200%;
     }
-}
-
-p
-{
-    font-size: 1.8rem;
-    line-height: 1.8;
 }
 
 //? ---------------------------------- ABOUT

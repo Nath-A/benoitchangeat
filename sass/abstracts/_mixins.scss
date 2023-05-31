@@ -33,3 +33,55 @@
     // mix-blend-mode: darken;
     z-index: 2;
 }
+
+@mixin responsive ($breakpoint)
+{
+
+    //! ORDER: Base + typography > general layout + grid > page layout > components
+    // 1em = 16px
+    @if $breakpoint ==phone
+    {
+        @media only screen and (max-width:26.25em) //420px
+
+        {
+            @content;
+        }
+    }
+
+    @if $breakpoint ==tablet
+    {
+        @media only screen and (max-width: 48em) //768px
+
+        {
+            @content;
+        }
+    }
+
+    @if $breakpoint ==laptop
+    {
+        @media only screen and (max-width: 64em) // 1024px
+
+        {
+            @content;
+        }
+    }
+
+    @if $breakpoint ==laptop-l
+    {
+        @media only screen and (max-width: 87.5em) // 1400px
+
+        {
+            @content;
+        }
+    }
+
+    @if $breakpoint ==big-screen
+    {
+        @media only screen and (min-width : 120em) // 1920px
+
+        {
+            @content;
+        }
+    }
+
+}

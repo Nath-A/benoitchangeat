@@ -1,0 +1,32 @@
+@use "../abstracts" as *;
+
+html
+{
+    // This defines what 1rem is > 1rem = 10px; 10px/16px = 62.5%
+    font-size: 62.5%;
+
+    @include responsive(big-screen)
+    {
+        font-size: 75%; //1rem = 12px, 12/16 = 75%
+    }
+
+    @include responsive(laptop-l)
+    {
+        font-size: 58.75%; // no idea but need to be a littlebit smaler
+    }
+
+    @include responsive(laptop)
+    {
+        font-size: 56.25%; //1rem = 9px, 9/16 = 56.25%
+    }
+
+    @include responsive(tablet)
+    {
+        font-size: 50%; //1rem = 8px, 8/16 = 50%
+    }
+
+    @include responsive(phone)
+    {
+        font-size: 40%;
+    }
+}
