@@ -6,12 +6,12 @@
     {
         max-width: 140rem;
         margin: 0 auto;
-        padding: 5rem 1rem;
+        padding: 5rem 2rem;
 
-        @include responsive(laptop-l)
-        {
-            padding: 5rem 2rem;
-        }
+        // @include responsive(laptop-l)
+        // {
+        //     padding: 5rem 2rem;
+        // }
     }
 
     &--1200
@@ -30,7 +30,7 @@
     {
         max-width: 160rem;
         margin: 0 auto;
-        padding: 6rem 1rem;
+        padding: 6rem 2rem;
     }
 
     &--1024

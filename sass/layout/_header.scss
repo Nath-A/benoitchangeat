@@ -8,6 +8,11 @@
     grid-template-rows: repeat(8, 1fr); // TODO à mettre en auto sous 1600 px ou minmax ! 
     min-height: 100vh;
 
+    @include responsive(laptop)
+    {
+        grid-template-rows: repeat(5, 1fr);
+    }
+
     &__background-color
     {
         background-color: $color-primary;
@@ -23,8 +28,11 @@
         justify-self: center;
         width: 4rem;
 
-        @include responsive(laptop-l)
-        {}
+        @include responsive(laptop)
+        {
+            grid-row: 1/ span 3;
+
+        }
 
     }
 
@@ -32,6 +40,11 @@
     {
         grid-column: 2 / span 2;
         grid-row: 3 / span 3;
+
+        @include responsive (laptop)
+        {
+            grid-row: 2 / span 3;
+        }
 
     }
 
@@ -41,6 +54,11 @@
         grid-row: 6 / span 1;
         align-self: center;
         justify-self: start;
+
+        @include responsive (laptop)
+        {
+            grid-row: 5 / span 1;
+        }
 
     }
 
@@ -100,6 +118,11 @@
             // grid-column: 2;
             width: 100%;
             align-self: center;
+
+            @include responsive (laptop)
+            {
+                display: none;
+            }
         }
 
         &--main
