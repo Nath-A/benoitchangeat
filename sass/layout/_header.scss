@@ -30,7 +30,9 @@
 
         @include responsive(laptop)
         {
-            grid-row: 1/ span 3;
+            grid-row: 1/ span 2;
+            width: 3.5rem;
+            align-self: end;
 
         }
 

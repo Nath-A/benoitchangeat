@@ -287,7 +287,7 @@ p {
 }
 @media only screen and (max-width: 64em) {
   p {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -297,6 +297,11 @@ p {
 }
 .heading-primary--up {
   font-size: 13rem;
+}
+@media only screen and (max-width: 64em) {
+  .heading-primary--up {
+    font-size: 10rem;
+  }
 }
 .heading-primary--main {
   text-transform: uppercase;
@@ -318,6 +323,11 @@ p {
   font-weight: 700;
   font-size: 6rem;
 }
+@media only screen and (max-width: 64em) {
+  .heading-secondary--main {
+    font-size: 5rem;
+  }
+}
 .heading-secondary--sub {
   font-weight: 700;
   font-size: 5rem;
@@ -336,20 +346,23 @@ p {
 .quote__text {
   text-transform: uppercase;
   font-size: 3rem;
+  line-height: 4rem;
 }
 .quote__author {
   font-size: 2rem;
-  line-height: 200%;
+  line-height: 250%;
 }
 
 .about__coach__text {
+  text-align: center;
+}
+.about__arrow__text {
   text-align: center;
 }
 
 .trust__item__heading {
   font-size: 2.5rem;
   font-weight: 700;
-  text-align: center;
 }
 
 .offers__item {
@@ -475,7 +488,9 @@ p {
 }
 @media only screen and (max-width: 64em) {
   .header__logo {
-    grid-row: 1/span 3;
+    grid-row: 1/span 2;
+    width: 3.5rem;
+    align-self: end;
   }
 }
 .header__heading {
@@ -742,6 +757,11 @@ section {
 .about > :first-child {
   padding-bottom: 0;
 }
+@media only screen and (max-width: 90em) {
+  .about > :first-child {
+    grid-template-columns: repeat(2, 50%);
+  }
+}
 .about > :nth-child(2) {
   padding-top: 0;
 }
@@ -764,11 +784,22 @@ section {
   width: unset;
   clip-path: ellipse(21rem 21rem at 50% 40%);
 }
+@media only screen and (max-width: 64em) {
+  .about__image__picture {
+    max-width: 100%;
+  }
+}
 .about__image__background {
   z-index: 1;
   position: relative;
   width: 100%;
   max-width: 45rem;
+}
+@media only screen and (max-width: 64em) {
+  .about__image__background {
+    width: 100%;
+    max-width: 40rem;
+  }
 }
 .about__heading, .about__coaching {
   grid-column: 1/span 5;
@@ -791,6 +822,11 @@ section {
   justify-self: center;
   grid-template-columns: 1fr 2fr;
 }
+@media only screen and (max-width: 64em) {
+  .about__arrow {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 .about__arrow__text {
   display: flex;
   flex-direction: column;
@@ -808,6 +844,13 @@ section {
   grid-row: 2;
   grid-column: 1/span 2;
   justify-self: center;
+}
+@media only screen and (max-width: 64em) {
+  .about__arrow img {
+    width: 10rem;
+    justify-self: end;
+    transform: translateX(-5rem);
+  }
 }
 .about__advantages {
   grid-column: 7/span 5;
@@ -890,6 +933,11 @@ section {
   row-gap: 6rem;
   column-gap: 10rem;
 }
+@media only screen and (max-width: 64em) {
+  .trust .grid {
+    column-gap: 6rem;
+  }
+}
 .trust__heading {
   color: #fff;
   grid-column: span 2;
@@ -965,6 +1013,12 @@ section {
   position: relative;
   z-index: 10;
 }
+@media only screen and (max-width: 64em) {
+  .offers > div:first-child {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2rem;
+  }
+}
 .offers::after {
   content: "";
   position: absolute;
@@ -981,6 +1035,11 @@ section {
   color: #fff;
   flex-direction: row;
   justify-content: center;
+}
+@media only screen and (max-width: 64em) {
+  .offers__heading {
+    grid-column: 1/span 2;
+  }
 }
 .offers__heading__underline {
   display: grid;

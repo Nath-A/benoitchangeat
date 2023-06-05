@@ -72,6 +72,11 @@
     & > :first-child
     {
         padding-bottom: 0;
+
+        @include responsive(laptop-l)
+        {
+            grid-template-columns: repeat(2, 50%);
+        }
     }
 
     & > :nth-child(2)
@@ -104,6 +109,11 @@
             // clip-path: circle(40%);
             clip-path: ellipse(21rem 21rem at 50% 40%);
 
+            @include responsive(laptop)
+            {
+                max-width: 100%;
+            }
+
         }
 
         &__background
@@ -112,6 +122,12 @@
             position: relative;
             width: 100%;
             max-width: 45rem;
+
+            @include responsive(laptop)
+            {
+                width: 100%;
+                max-width: 40rem;
+            }
         }
     }
 
@@ -146,7 +162,12 @@
         display: grid;
         justify-self: center;
         grid-template-columns: 1fr 2fr;
+
         // grid-template-rows: repeat(2, auto);
+        @include responsive(laptop)
+        {
+            grid-template-columns: 1fr 1fr;
+        }
 
         &__text
         {
@@ -171,6 +192,13 @@
             grid-row: 2;
             grid-column: 1 / span 2;
             justify-self: center;
+
+            @include responsive(laptop)
+            {
+                width: 10rem;
+                justify-self: end;
+                transform: translateX(-5rem);
+            }
         }
     }
 
@@ -279,6 +307,11 @@
     {
         row-gap: 6rem;
         column-gap: 10rem;
+
+        @include responsive(laptop)
+        {
+            column-gap: 6rem;
+        }
 
     }
 
@@ -408,6 +441,27 @@
         z-index: 10;
     }
 
+    & > div:first-child // container grid original 3x1fr
+
+    {
+        @include responsive(laptop)
+        {
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 2rem;
+        }
+
+        // & > div:last-child // last div, last offer
+
+        // {
+        //     @include responsive(laptop)
+        //     {
+        //         grid-column: 1 / span 2;
+        //         justify-self: center;
+        //     }
+        // }
+    }
+
+
     &::after
     {
         @include background-filter;
@@ -420,6 +474,11 @@
         color: $color-white;
         flex-direction: row;
         justify-content: center;
+
+        @include responsive(laptop)
+        {
+            grid-column: 1 / span 2;
+        }
 
         &__underline
         {

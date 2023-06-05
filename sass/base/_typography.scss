@@ -24,7 +24,7 @@ p
 
     @include responsive(laptop)
     {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
 }
 
@@ -36,6 +36,11 @@ p
     &--up
     {
         font-size: 13rem;
+
+        @include responsive(laptop)
+        {
+            font-size: 10rem;
+        }
 
     }
 
@@ -65,6 +70,11 @@ p
     {
         font-weight: 700;
         font-size: 6rem;
+
+        @include responsive(laptop)
+        {
+            font-size: 5rem;
+        }
     }
 
     &--sub
@@ -93,19 +103,28 @@ p
     {
         text-transform: uppercase;
         font-size: 3rem;
+        line-height: 4rem;
     }
 
     &__author
     {
         font-size: 2rem;
-        line-height: 200%;
+        line-height: 250%;
     }
 }
 
 //? ---------------------------------- ABOUT
-.about__coach__text
+.about
 {
-    text-align: center;
+    &__coach__text
+    {
+        text-align: center;
+    }
+
+    &__arrow__text
+    {
+        text-align: center;
+    }
 }
 
 //? ---------------------------------- TRUST
@@ -116,7 +135,7 @@ p
     {
         font-size: 2.5rem;
         font-weight: 700;
-        text-align: center;
+
     }
 
 }
