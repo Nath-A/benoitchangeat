@@ -40,6 +40,7 @@
     @include grid-center;
     position: relative;
     min-height: 20rem;
+    padding: 2rem 5rem;
 
     &::before
     {
@@ -77,11 +78,21 @@
         {
             grid-template-columns: repeat(2, 50%);
         }
+
+        @include responsive(phone)
+        {
+            grid-template-columns: 1fr;
+        }
     }
 
     & > :nth-child(2)
     {
         padding-top: 0;
+
+        // @include responsive(phone)
+        // {
+        //     grid-template-columns: 1fr;
+        // }
     }
 
     &__image
@@ -128,6 +139,11 @@
                 width: 100%;
                 max-width: 40rem;
             }
+
+            @include responsive (tablet)
+            {
+                max-width: 37rem;
+            }
         }
     }
 
@@ -139,6 +155,11 @@
         flex-direction: column;
         margin-bottom: 2rem;
         justify-content: space-around;
+
+        @include responsive(phone)
+        {
+            grid-column: 1 / span 1;
+        }
     }
 
     &__heading span:last-of-type
@@ -167,6 +188,11 @@
         @include responsive(laptop)
         {
             grid-template-columns: 1fr 1fr;
+        }
+
+        @include responsive(phone)
+        {
+            grid-column: 1 / span 1;
         }
 
         &__text
@@ -206,6 +232,11 @@
     {
         grid-column: 7 / span 5;
         grid-row: 2 / 3;
+
+        @include responsive(phone)
+        {
+            grid-column: 1 / span 1;
+        }
 
         &__item
         {
@@ -340,6 +371,10 @@
         //     white-space: nowrap
         // }
 
+        @include responsive(phone)
+        {
+            grid-column: span 1;
+        }
     }
 
     &__item
@@ -392,13 +427,23 @@
             column-gap: 1rem;
             width: 45rem;
 
+            @include responsive(phone)
+            {
+                width: 100%;
+            }
+
 
             img
             {
                 width: 5rem;
                 position: absolute;
                 transform: translate(30rem, 1.7rem);
+
                 // position: relative;
+                @include responsive(phone)
+                {
+                    transform: translate(20rem, 1.7rem);
+                }
             }
         }
     }
@@ -450,6 +495,11 @@
             row-gap: 2rem;
         }
 
+        @include responsive(phone)
+        {
+            grid-template-columns: 1fr;
+        }
+
         & > div:last-child // last div, last offer
 
         {
@@ -457,7 +507,12 @@
             {
                 grid-column: 1 / span 2;
                 justify-self: center;
-                width: 50%;
+                // width: 50%;
+            }
+
+            @include responsive(phone)
+            {
+                grid-column: 1 / span 1;
             }
         }
     }
@@ -475,10 +530,16 @@
         color: $color-white;
         flex-direction: row;
         justify-content: center;
+        flex-wrap: wrap;
 
         @include responsive(laptop)
         {
             grid-column: 1 / span 2;
+        }
+
+        @include responsive(phone)
+        {
+            grid-column: 1 / span 1;
         }
 
         &__underline
@@ -549,6 +610,12 @@
         grid-column: 1 / span 2;
         flex-direction: row;
         justify-content: center;
+        flex-wrap: wrap;
+
+        @include responsive(phone)
+        {
+            grid-column: 1 / span 1;
+        }
     }
 
     &__item
@@ -590,6 +657,11 @@
         justify-self: center;
         // font-weight: 400 !important;
         justify-items: center;
+
+        @include responsive(phone)
+        {
+            grid-column: 1 / span 1;
+        }
     }
 }
 
@@ -620,6 +692,14 @@
         mix-blend-mode: hard-light;
     }
 
+    .grid
+    {
+        @include responsive(phone)
+        {
+            row-gap: 8rem;
+        }
+    }
+
     &__heading
     {
         color: $color-white;
@@ -628,6 +708,8 @@
         margin-bottom: 10rem;
         margin-bottom: 10rem;
         // margin-bottom: 3rem;
+        flex-wrap: wrap;
+
 
     }
 
