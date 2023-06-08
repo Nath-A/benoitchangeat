@@ -37,6 +37,11 @@ p
     {
         font-size: 13rem;
 
+        @include responsive(laptop-l)
+        {
+            font-size: 11rem;
+        }
+
         @include responsive(laptop)
         {
             font-size: 10rem;
@@ -71,9 +76,19 @@ p
         font-weight: 700;
         font-size: 6rem;
 
-        @include responsive(laptop)
+        @include responsive(laptop-l)
         {
             font-size: 5rem;
+        }
+
+        @include responsive(laptop)
+        {
+            font-size: 4.5rem;
+        }
+
+        @include responsive(phone)
+        {
+            font-size: 4rem;
         }
     }
 

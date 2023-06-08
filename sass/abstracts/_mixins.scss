@@ -48,6 +48,15 @@
         }
     }
 
+    @if $breakpoint ==phone-l
+    {
+        @media only screen and (max-width:36em) //576px
+
+        {
+            @content;
+        }
+    }
+
     @if $breakpoint ==tablet
     {
         @media only screen and (max-width: 48em) //768px

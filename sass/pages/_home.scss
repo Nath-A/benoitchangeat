@@ -564,6 +564,10 @@
         padding: 3rem 8rem;
         box-shadow: 0rem 0rem 1.5rem 0.5rem rgba($color-black, 0.15);
 
+        @include responsive (tablet)
+        {
+            padding: 2rem 4rem;
+        }
 
 
         &__img
@@ -571,6 +575,16 @@
             width: 20rem;
             display: block;
             margin: 0 auto;
+
+            @include responsive(laptop-l)
+            {
+                width: 15rem;
+            }
+
+            @include responsive(tablet)
+            {
+                width: 10rem;
+            }
         }
 
         &__heading
@@ -776,6 +790,11 @@
         z-index: -1;
         transform: translate(-50%, -50%);
         height: 50rem;
+
+        @include responsive(phone)
+        {
+            height: 40rem;
+        }
     }
 
     &__heading
@@ -817,6 +836,15 @@
     &__form
     {
         align-items: flex-end;
+
+        input
+        {
+            @include responsive(tablet)
+            {
+
+                width: 100%;
+            }
+        }
 
         &__btn
         {

@@ -10,7 +10,7 @@
 
     @include responsive(laptop)
     {
-        grid-template-rows: repeat(5, 1fr);
+        // max-height: 100vh;
     }
 
     &__background-color
@@ -18,6 +18,7 @@
         background-color: $color-primary;
         grid-column: 1 / span 3;
         grid-row: 1 / span 7;
+
     }
 
     &__logo
@@ -30,9 +31,10 @@
 
         @include responsive(laptop)
         {
-            grid-row: 1/ span 2;
+            grid-row: 1/ span 3;
             width: 3.5rem;
-            align-self: end;
+            align-self: center;
+            justify-self: center;
 
         }
 
@@ -43,9 +45,19 @@
         grid-column: 2 / span 2;
         grid-row: 3 / span 3;
 
+        @include responsive(laptop-l)
+        {
+            grid-row: 2 / span 4;
+        }
+
         @include responsive (laptop)
         {
             grid-row: 2 / span 3;
+        }
+
+        @include responsive(tablet)
+        {
+            grid-row: 2 / span 2;
         }
 
     }
@@ -93,6 +105,11 @@
         justify-items: start;
         justify-content: center;
 
+        @include responsive(tablet)
+        {
+            grid-template-columns: 1fr;
+        }
+
 
         &--up
         {
@@ -131,6 +148,11 @@
         {
             grid-column: 1 / span 2;
             position: relative;
+
+            @include responsive(tablet)
+            {
+                grid-column: 1 / span 1;
+            }
 
             &__text
             {
