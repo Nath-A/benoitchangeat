@@ -637,8 +637,21 @@
         //! CHEAT CODE
         border: 2px solid $color-black;
         border-radius: 1rem;
-        padding: 2rem 1rem;
+        padding: 1rem 1rem;
+        cursor: pointer;
 
+        &[open]
+        {}
+
+        &__question
+        {
+            padding: 3rem 0;
+        }
+
+        &__answer
+        {
+            padding: 3rem 0;
+        }
 
         &__question,
         &__answer
@@ -649,19 +662,19 @@
             // border: 2px solid $color-black;
             // border-radius: 1rem;
 
-            display: grid;
-            grid-template-columns: 1fr auto;
-            padding: 1rem 1rem;
+            // display: grid;
+            // grid-template-columns: 1fr auto;
+            padding: 1rem 0;
 
             // cursor: pointer;
 
         }
 
-        &__toggle,
-        .fa
-        {
-            display: none;
-        }
+        // &__toggle,
+        // .fa
+        // {
+        //     display: none;
+        // }
 
     }
 

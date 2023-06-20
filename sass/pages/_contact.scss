@@ -1,0 +1,18 @@
+@use "../abstracts" as *;
+
+.contact
+{
+    &__iframe
+    {
+        width: 100%;
+        border: none;
+        min-height: 1080px;
+        // overflow: visible;
+
+        body
+        {
+            font-family: $font-family !important;
+
+        }
+    }
+}
