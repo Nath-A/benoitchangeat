@@ -439,6 +439,10 @@ p {
 .faq__item__answer {
   font-weight: 400;
 }
+.faq__item__list__item {
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
 
 .testimonials__item {
   text-align: center;
@@ -1234,17 +1238,12 @@ section {
   border: 2px solid #000;
   border-radius: 1rem;
   padding: 1rem 1rem;
-  cursor: pointer;
 }
 .faq__item__question {
-  padding: 3rem 0;
+  padding: 1rem 0;
+  cursor: pointer;
 }
 .faq__item__answer {
-  padding: 3rem 0;
-}
-.faq__item__question, .faq__item__answer {
-  width: 100%;
-  border: none;
   padding: 1rem 0;
 }
 .faq__btn {
@@ -1301,7 +1300,6 @@ section {
   flex-direction: row;
   justify-content: center;
   margin-bottom: 10rem;
-  margin-bottom: 10rem;
   flex-wrap: wrap;
 }
 .testimonials__item {
@@ -1314,11 +1312,18 @@ section {
   position: relative;
 }
 .testimonials__item__picture {
-  border-radius: 100%;
-  width: 10rem;
+  background-color: #fff;
+  border-radius: 50%;
   transform: translateY(-50%);
   position: absolute;
   top: 0;
+  padding: 1rem;
+}
+.testimonials__item__picture i {
+  font-size: 6rem;
+  color: #FFA015;
+  z-index: 1000;
+  position: relative;
 }
 .testimonials__item__heading {
   display: flex;
