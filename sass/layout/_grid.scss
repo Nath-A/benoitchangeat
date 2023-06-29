@@ -9,7 +9,7 @@
         grid-template-columns: repeat(2, 1fr);
         column-gap: 2rem;
 
-        @include responsive(phone)
+        @include responsive(phone-l)
         {
             grid-template-columns: 1fr;
         }
@@ -20,7 +20,7 @@
         grid-template-columns: repeat(11, 1fr);
         column-gap: 2rem;
 
-        @include responsive(phone)
+        @include responsive(phone-l)
         {
             grid-template-columns: 1fr;
         }
@@ -31,7 +31,7 @@
         grid-template-columns: repeat(3, 1fr);
         column-gap: 2rem;
 
-        @include responsive(phone)
+        @include responsive(phone-l)
         {
             grid-template-columns: 1fr;
         }

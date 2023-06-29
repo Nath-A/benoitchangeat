@@ -10,11 +10,13 @@
 
     @include responsive(laptop)
     {
-        // max-height: 100vh;
+        max-height: 100vh;
     }
 
-    @include responsive(mobile-l)
-    {}
+    @include responsive(phone)
+    {
+        min-height: initial;
+    }
 
     &__background-color
     {
@@ -71,8 +73,16 @@
         grid-row: 6 / span 1;
         align-self: center;
         justify-self: start;
+        text-align: center;
+
 
         @include responsive (laptop)
+        {
+            grid-row: 6 / span 1;
+
+        }
+
+        @include responsive(phone)
         {
             grid-row: 5 / span 1;
         }
