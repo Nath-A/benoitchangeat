@@ -90,7 +90,8 @@
 
 .about
 {
-    & > :first-child
+    & > :first-child // Qui suis je ? container
+
     {
         padding-bottom: 0;
 
@@ -102,12 +103,19 @@
         @include responsive(phone-l)
         {
             grid-template-columns: 1fr;
+            grid-template-areas: "heading" "picture" "text";
         }
     }
 
-    & > :nth-child(2)
+    & > :nth-child(2) // Coaching Kesako ? container
+
     {
         padding-top: 0;
+
+        @include responsive(phone-l)
+        {
+            grid-template-areas: "heading" "text" "arrow" "pictures";
+        }
     }
 
     &__image
@@ -117,6 +125,11 @@
         grid-template-rows: 1fr;
         justify-items: center;
         align-items: start;
+
+        @include responsive(phone-l)
+        {
+            grid-area: picture;
+        }
 
         &__picture,
         &__background
@@ -177,6 +190,9 @@
         }
     }
 
+    &__coaching
+    {}
+
     &__heading span:last-of-type
     {
         margin-left: 5rem;
@@ -184,11 +200,21 @@
 
     &__coach
     {
+        @include responsive(phone-l)
+        {
+            grid-area: heading;
+        }
+
         &__button-container
         {
             display: grid;
             justify-items: end;
             margin-top: 2rem;
+
+            @include responsive(phone-l)
+            {
+                grid-area: text;
+            }
         }
     }
 
@@ -208,6 +234,7 @@
         @include responsive(phone-l)
         {
             grid-column: 1 / span 1;
+            grid-area: arrow;
         }
 
         &__text
