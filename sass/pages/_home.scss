@@ -90,262 +90,397 @@
 
 .about
 {
-    & > :first-child // Qui suis je ? container
 
+    &__coach
     {
         padding-bottom: 0;
+        grid-template-areas: "picture heading"
+            "picture text";
+        ;
 
         @include responsive(laptop-l)
         {
             grid-template-columns: repeat(2, 50%);
+
         }
 
         @include responsive(phone-l)
         {
             grid-template-columns: 1fr;
             grid-template-areas: "heading" "picture" "text";
+            grid-template-rows: auto 50rem auto;
+            row-gap: 1.5rem;
         }
-    }
 
-    & > :nth-child(2) // Coaching Kesako ? container
-
-    {
-        padding-top: 0;
-
-        @include responsive(phone-l)
+        @include responsive(phone-s)
         {
-            grid-template-areas: "heading" "text" "arrow" "pictures";
-        }
-    }
-
-    &__image
-    {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        justify-items: center;
-        align-items: start;
-
-        @include responsive(phone-l)
-        {
-            grid-area: picture;
-        }
-
-        &__picture,
-        &__background
-        {
-            grid-row: 1;
-            grid-column: 1;
-        }
-
-        &__picture
-        {
-            z-index: 2;
-            display: block;
-            max-width: 60rem;
-            height: auto;
-            width: unset;
-            // clip-path: circle(40%);
-            clip-path: ellipse(21rem 21rem at 50% 40%);
-
-            @include responsive(laptop)
-            {
-                max-width: 100%;
-            }
+            grid-template-rows: auto 45rem auto;
 
         }
 
-        &__background
-        {
-            z-index: 1;
-            position: relative;
-            width: 100%;
-            max-width: 45rem;
-
-            @include responsive(laptop)
-            {
-                width: 100%;
-                max-width: 40rem;
-            }
-
-            @include responsive (tablet)
-            {
-                max-width: 37rem;
-            }
-        }
-    }
-
-    &__heading,
-    &__coaching
-    {
-        grid-column: 1 / span 5;
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 2rem;
-        justify-content: space-around;
-
-        @include responsive(phone-l)
-        {
-            grid-column: 1 / span 1;
-        }
-    }
-
-    &__coaching
-    {}
-
-    &__heading span:last-of-type
-    {
-        margin-left: 5rem;
-    }
-
-    &__coach
-    {
-        @include responsive(phone-l)
-        {
-            grid-area: heading;
-        }
-
-        &__button-container
+        &__img
         {
             display: grid;
-            justify-items: end;
-            margin-top: 2rem;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            justify-items: center;
+            align-items: start;
+            grid-row: 1 / span 2;
+
+
+            @include responsive(phone-l)
+            {
+                grid-area: picture;
+            }
+
+            &__picture,
+            &__background
+            {
+                grid-row: 1;
+                grid-column: 1;
+            }
+
+            &__picture
+            {
+                z-index: 2;
+                display: block;
+                max-width: 60rem;
+                height: auto;
+                width: unset;
+                // clip-path: circle(40%);
+                clip-path: ellipse(21rem 21rem at 50% 40%);
+
+                @include responsive(laptop-l)
+                {
+                    max-width: 55rem;
+                }
+
+                @include responsive(laptop)
+                {
+                    max-width: 100%;
+                    clip-path: ellipse(21rem 21rem at 50% 30%);
+                }
+
+                @include responsive(tablet)
+                {
+                    clip-path: ellipse(21rem 21rem at 50% 25%);
+                }
+
+                // @media only screen and (max-width: 41em) //656px
+
+                // {
+                //     clip-path: ellipse(21rem 21rem at 50% 22%);
+                // }
+
+                @include responsive(phone-l)
+                {
+                    clip-path: ellipse(21rem 21rem at 50% 35%);
+
+                }
+
+                // @media only screen and (max-width: 30em) //480px
+
+                // {
+                //     clip-path: ellipse(21rem 21rem at 50% 22%);
+                // }
+
+                @include responsive(phone)
+                {
+                    clip-path: ellipse(21rem 21rem at 50% 40%);
+
+                }
+
+            }
+
+            &__background
+            {
+                z-index: 1;
+                position: relative;
+                width: 100%;
+                max-width: 45rem;
+
+                @include responsive(laptop-l)
+                {
+                    max-width: 42.5rem;
+
+                }
+
+
+                @include responsive(laptop)
+                {
+                    max-width: 35rem;
+                }
+
+                @media only screen and (max-width: 55em)
+                {
+                    max-width: 32rem;
+                }
+
+                @include responsive (tablet)
+                {
+                    max-width: 29rem;
+                }
+
+                @include responsive(phone-l)
+                {
+                    max-width: 40rem;
+
+                }
+
+
+                @media only screen and (max-width: 30em) //480px
+
+                {
+                    max-width: 37rem;
+                }
+
+                @include responsive(phone)
+                {
+                    max-width: 40rem;
+                }
+
+
+                @include responsive(phone-s)
+                {
+                    max-width: 35rem;
+                }
+            }
+        }
+
+        &__text
+        {
+            grid-column: 2 / span 1;
 
             @include responsive(phone-l)
             {
                 grid-area: text;
             }
+
+            &__button-container
+            {
+                display: grid;
+                justify-items: end;
+                margin-top: 2rem;
+
+                @include responsive(phone-l)
+                {
+                    grid-area: text;
+                }
+            }
+
         }
+
     }
 
-    &__arrow
+    &__coaching
     {
-        grid-column: 4 / span 5;
-        display: grid;
-        justify-self: center;
-        grid-template-columns: 1fr 2fr;
-
-        // grid-template-rows: repeat(2, auto);
-        @include responsive(laptop)
-        {
-            grid-template-columns: 1fr 1fr;
-        }
+        padding-top: 0;
+        grid-template-areas:
+            "heading heading heading heading heading . . . . . ."
+            "text text text text text . pictures pictures pictures pictures pictures"
+            ". . . arrow arrow arrow arrow arrow . . ."
+        ;
 
         @include responsive(phone-l)
         {
-            grid-column: 1 / span 1;
-            grid-area: arrow;
+            grid-template-areas: "heading" "text" "arrow" "pictures" "button";
+            row-gap: 1.5rem;
+            margin-top: 5rem;
+        }
+
+        &__heading
+        {
+            // grid-column: 1 / span 5;
+            grid-area: heading;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 2rem;
+            justify-content: space-around;
+
+            & span:last-of-type
+            {
+                margin-left: 5rem;
+            }
+
+            @include responsive(phone-l)
+            {
+                margin-bottom: 0;
+            }
         }
 
         &__text
         {
-            display: flex;
-            flex-direction: column;
-            text-transform: uppercase;
-            font-size: 2rem;
-            font-weight: 700;
-            line-height: initial;
-            align-items: center;
-
-
-            span
-            {
-                font-size: 3rem;
-            }
+            grid-area: text;
         }
 
-        img
+        &__arrow
         {
-            width: 18rem;
-            grid-row: 2;
-            grid-column: 1 / span 2;
+            // grid-column: 4 / span 5;
+            display: grid;
             justify-self: center;
+            grid-template-columns: 1fr 2fr;
+            grid-area: arrow;
 
+            // grid-template-rows: repeat(2, auto);
             @include responsive(laptop)
             {
-                width: 10rem;
-                justify-self: end;
-                transform: translateX(-5rem);
+                grid-template-columns: 1fr 1fr;
             }
-        }
-    }
 
-    &__advantages
-    {
-        grid-column: 7 / span 5;
-        grid-row: 2 / 3;
-
-        @include responsive(phone-l)
-        {
-            grid-column: 1 / span 1;
-        }
-
-        &__item
-        {
-            display: grid;
-            grid-template-columns: auto 1fr;
-            align-items: center;
-            column-gap: 1rem;
-
-            &__img
+            @include responsive(phone-l)
             {
-                width: 5rem;
+                // grid-column: 1 / span 1;
+
+
             }
 
             &__text
             {
-                color: $color-white;
-                border-radius: 1rem;
-                padding: 1.5rem 2rem;
-                vertical-align: bottom;
-                align-self: center;
+                display: flex;
+                flex-direction: column;
+                text-transform: uppercase;
+                font-size: 2rem;
+                font-weight: 700;
+                line-height: initial;
+                align-items: center;
 
+                @include responsive(phone-l)
+                {
+                    grid-column: 1 / span 2;
+
+                }
+
+
+                span
+                {
+                    font-size: 3rem;
+                }
             }
 
-            &--1 p
+            img
             {
-                background-color: $color-primary;
+                width: 18rem;
+                grid-row: 2;
+                grid-column: 1 / span 2;
+                justify-self: center;
 
-            }
+                @include responsive(laptop)
+                {
+                    width: 10rem;
+                    justify-self: end;
+                    transform: translateX(-5rem);
+                }
 
-            &--2 p
-            {
-                background-color: $color-primary-90;
-
-            }
-
-            &--3 p
-            {
-                background-color: $color-primary-80;
-
-            }
-
-            &--4 p
-            {
-                background-color: $color-primary-70;
-
-            }
-
-            &--5 p
-            {
-                background-color: $color-primary-60;
-
+                @include responsive(phone-l)
+                {
+                    transform: scaleY(-1) rotateZ(-90deg) translateY(5rem) translateX(0rem);
+                    // transform: rotateY(180deg) rotateZ(100deg) translateY(5rem) translateX(0rem);
+                    justify-self: center;
+                    width: 7.5rem;
+                }
             }
         }
 
-        &__item:not(:last-child)
+        &__advantages
         {
-            margin-bottom: 1.5rem;
+
+            grid-area: pictures;
+
+
+            @include responsive(phone-l)
+            {
+                margin-top: 2rem;
+            }
+
+            &__item
+            {
+                display: grid;
+                grid-template-columns: auto 1fr;
+                align-items: center;
+                column-gap: 1rem;
+
+                &__img
+                {
+                    width: 5rem;
+                }
+
+                &__text
+                {
+                    color: $color-white;
+                    border-radius: 1rem;
+                    padding: 1.5rem 2rem;
+                    vertical-align: bottom;
+                    align-self: center;
+
+                }
+
+                &--1 p
+                {
+                    background-color: $color-primary;
+
+                }
+
+                &--2 p
+                {
+                    background-color: $color-primary-90;
+
+                }
+
+                &--3 p
+                {
+                    background-color: $color-primary-80;
+
+                }
+
+                &--4 p
+                {
+                    background-color: $color-primary-70;
+
+                }
+
+                &--5 p
+                {
+                    background-color: $color-primary-60;
+
+                }
+            }
+
+            &__item:not(:last-child)
+            {
+                margin-bottom: 1.5rem;
+            }
+
+
+        }
+
+        &__btn
+        {
+
+            // grid-column: 2 / span 2;
+            justify-self: end;
+            align-self: flex-end;
+            grid-area: text;
+            margin-bottom: 5rem;
+
+            @include responsive(phone-l)
+            {
+                grid-area: unset;
+                margin-bottom: initial;
+                align-self: center;
+            }
+
         }
     }
 
-    &__btn
-    {
 
-        grid-column: 2 / span 2;
-        justify-self: end;
-        align-self: flex-end;
-    }
+
+
+
+
+
+
+
+
 }
 
 //? ----------------------------------- TRUST
@@ -472,6 +607,12 @@
             @include responsive(phone)
             {
                 width: 100%;
+
+            }
+
+            @include responsive(phone-s)
+            {
+                height: fit-content;
             }
 
 
@@ -481,10 +622,16 @@
                 position: absolute;
                 transform: translate(30rem, 1.7rem);
 
-                // position: relative;
+
                 @include responsive(phone)
                 {
-                    transform: translate(20rem, 1.7rem);
+                    transform: translate(36rem, 2rem);
+                }
+
+                @include responsive(phone-s)
+                {
+                    transform: translate(0, 0);
+                    position: relative;
                 }
             }
         }
@@ -721,6 +868,11 @@
 {
     position: relative;
     z-index: 999;
+
+    @include responsive(phone)
+    {
+        padding: 3rem;
+    }
 
     &::before
     {
