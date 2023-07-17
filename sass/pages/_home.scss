@@ -587,14 +587,41 @@
 //? ---------------------------------- GIFT
 .gift
 {
+
     min-height: 100vh;
     align-items: center;
+
+    @include responsive(laptop)
+    {
+        min-height: unset;
+    }
+
+    & > .grid
+    {
+        grid-template-areas:
+            "heading picture"
+            "text picture"
+            "form picture";
+        grid-template-rows: auto auto 1fr;
+
+        @include responsive(tablet)
+        {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "heading"
+                "picture"
+                "text"
+                "form";
+            grid-template-rows: initial;
+        }
+    }
 
     &__cta
     {
         &__description
         {
             margin: 3rem 0;
+            grid-area: text;
         }
 
         &__btn
@@ -604,9 +631,11 @@
             column-gap: 1rem;
             width: 45rem;
 
+
             @include responsive(phone)
             {
                 width: 100%;
+                height: 6rem;
 
             }
 
@@ -623,15 +652,38 @@
                 transform: translate(30rem, 1.7rem);
 
 
-                @include responsive(phone)
-                {
-                    transform: translate(36rem, 2rem);
-                }
 
-                @include responsive(phone-s)
+                // @include responsive(tablet)
+                // {
+                //     transform: translate(45rem, 1.7rem);
+                // }
+
+                // @include responsive(phone)
+                // {
+                //     transform: translate(36rem, 2rem);
+                // }
+
+                @include responsive(tablet)
                 {
                     transform: translate(0, 0);
-                    position: relative;
+                    // position: relative;
+                    right: 5rem;
+                }
+            }
+        }
+
+        &__form
+        {
+            grid-area: form;
+
+            input[type=text],
+            input[type=email],
+            button
+            {
+                @include responsive (laptop)
+                {
+
+                    width: 100%;
                 }
             }
         }
@@ -644,6 +696,8 @@
         // background-image: url(../img/07_GuideCTA-ebook_mockup.png);
         // background-size: cover;
         // background-repeat: no-repeat;
+        grid-area: picture;
+
         &__item
         {
 
@@ -651,6 +705,8 @@
             height: auto;
         }
     }
+
+
 
 
 }
@@ -752,6 +808,11 @@
         border-radius: 1rem;
         padding: 3rem 8rem;
         box-shadow: 0rem 0rem 1.5rem 0.5rem rgba($color-black, 0.15);
+
+        @include responsive(laptop-l)
+        {
+            padding: 3.5rem;
+        }
 
         @include responsive (tablet)
         {
