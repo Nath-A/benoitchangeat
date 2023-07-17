@@ -74,6 +74,7 @@
         align-self: center;
         justify-self: start;
         text-align: center;
+        border: 2px solid $color-white ;
 
 
         @include responsive (laptop)
