@@ -384,3 +384,18 @@ p
         font-weight: 700;
     }
 }
+
+//? ----------------------------------- LEGAL NOTICES
+.legal-notices
+{
+    &__heading
+    {
+        &--primary
+        {
+            text-align: center;
+        }
+
+        &--secondary
+        {}
+    }
+}
