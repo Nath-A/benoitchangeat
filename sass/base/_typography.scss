@@ -1,4 +1,5 @@
 @use "../abstracts" as *;
+@use "../components" as *;
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Raleway:ital,wght@0,300;0,400;0,500;0,700;0,800;0,900;1,400&display=swap');
 
@@ -26,6 +27,11 @@ p
     {
         font-size: 1.4rem;
     }
+}
+
+a
+{
+    color: $color-primary;
 }
 
 .heading-primary
@@ -394,8 +400,13 @@ p
         {
             text-align: center;
         }
+    }
 
-        &--secondary
-        {}
+    &__list
+    {
+        &__item
+        {
+            @extend .list--vertical__item;
+        }
     }
 }
