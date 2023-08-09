@@ -28,6 +28,21 @@
 
     &__logo
     {
+        &--icon
+        {
+            display: none;
+            grid-column: 1;
+            grid-row: 1;
+            align-self: center;
+            justify-self: center;
+            width: 3.5rem;
+
+            @include responsive(phone-l)
+            {
+                display: initial;
+            }
+        }
+
         grid-column: 1 / span 1;
         grid-row: 1/ span 4;
         align-self: center;
@@ -36,13 +51,17 @@
 
         @include responsive(laptop)
         {
-            grid-row: 1/ span 3;
+            // grid-row: 1/ span 3;
             width: 3.5rem;
             align-self: center;
             justify-self: center;
 
         }
 
+        @include responsive(phone-l)
+        {
+            display: none;
+        }
     }
 
     &__heading
