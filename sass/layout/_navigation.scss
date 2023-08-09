@@ -22,6 +22,13 @@
         text-align: center;
         @include grid-center;
 
+        @include responsive(tablet)
+        {
+            // height: 3rem;
+            // width: 3rem;
+            top: 5rem;
+            left: 2.5rem;
+        }
     }
 
     &__background
@@ -35,6 +42,14 @@
         background-image: radial-gradient($color-primary-60, $color-primary);
         z-index: 1400;
         transition: transform .8s;
+
+        @include responsive(tablet)
+        {
+            // height: 3rem;
+            // width: 3rem;
+            top: 5rem;
+            left: 2.5rem;
+        }
     }
 
     &__nav
@@ -79,6 +94,7 @@
             text-decoration: none;
             text-transform: uppercase;
             transition: all .4s;
+
         }
 
         &:hover
@@ -130,6 +146,11 @@
             height: 2px;
             background-color: $color-white;
             display: inline-block;
+
+            // @include responsive(tablet)
+            // {
+            //     width: 2rem;
+            // }
         }
 
         &::before,
