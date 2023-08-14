@@ -1,9 +1,19 @@
 import '../sass/main.scss';
 
-// import '../script/mailchimpScripts';
-// //JS hack to resolve bad import from vite
-// import testImg from '../img/01_header-fabio-comparelli-uq2E2V4LhCY-unsplash.jpg';
-// document.querySelector('.header__background-image').style.backgroundImage = `url(${testImg})`;
+// ? : Menu qui se ferme après le clic !
 
+const closeNavigation = function ()
+{
+    document.getElementById('navi-toggle').checked = false;
+}
 
-// TODO : Menu qui se ferme après le clic ! 
+const navigationLinks = document.querySelectorAll('.navigation__link');
+console.log(navigationLinks);
+for (let i = 0; i < navigationLinks.length; i++)
+{
+    navigationLinks[i].addEventListener('click', closeNavigation);
+
+}
+// TODO : PDF slider !
+
+// TODO : Affichage de l'icone du menu onScroll
