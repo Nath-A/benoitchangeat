@@ -15,8 +15,8 @@ strong
 
 p
 {
-    font-size: 1.5rem;
-    line-height: 1.5;
+    font-size: 1.6rem;
+    line-height: 1.6;
 
     // @include responsive(laptop)
     // {
@@ -51,7 +51,7 @@ a
     &--main
     {
         font-weight: 700;
-        font-size: 3rem;
+        font-size: 4rem;
 
         // @include responsive(laptop-l)
         // {
@@ -103,6 +103,24 @@ a
         // }
 
     }
+}
+
+.heading-tertiary
+{
+
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 2.5rem;
+    text-align: center;
+
+
+
+    span
+    {
+        display: block;
+        font-weight: 800;
+    }
+
 }
 
 //? ---------------------------------- teaser
@@ -163,41 +181,22 @@ a
 
 //? ---------------------------------- OFFERS
 
-.offers__item
+.offers
 {
-    transition: all 0.2s;
-    position: relative;
 
-    &:hover
+    &__item
     {
-        transform: scale(110%);
-        z-index: 1001;
-    }
 
-    &__heading
-    {
-        text-transform: uppercase;
-        font-weight: 400;
-        // font-size: 2.5rem;
-        text-align: center;
-
-
-        span
+        &__text
         {
-            display: block;
-            font-weight: 800;
+            &__paragraph
+            {
+                font-size: 1.5rem;
+                line-height: 1.2;
+            }
         }
-    }
 
-    &__text
-    {
-        &__paragraph
-        {
-            // font-size: 1.5rem;
-            // line-height: 1.2;
-        }
     }
-
 }
 
 //? ---------------------------------- FAQ
@@ -322,21 +321,47 @@ a
 }
 
 //? ----------------------------------- LEGAL NOTICES
-.legal-notices
+.legal-notices,
+.privacy-policy
 {
     &__heading
     {
-        &--primary
+        &-primary
         {
             text-align: center;
+        }
+
+        &-tertiary
+        {
+            text-align: left;
+            font-size: 2rem;
+            text-decoration: underline;
+            font-weight: 500;
         }
     }
 
     &__list
     {
+        @extend .list--vertical;
+
         &__item
         {
             @extend .list--vertical__item;
+
         }
     }
+
+
 }
+
+//? ----------------------------------- PRIVACY POLICY
+// .privacy-policy
+// {
+//     &__heading
+//     {
+//         &__primary
+//         {
+//             text-align: center;
+//         }
+//     }
+// }

@@ -93,10 +93,10 @@
 
     &__coach
     {
-        padding-bottom: 0;
-        grid-template-areas: "picture heading"
-            "picture text";
-        ;
+
+        grid-template-areas: "picture heading" "picture text";
+
+        grid-template-rows: auto 1fr;
 
         @include responsive(laptop-l)
         {
@@ -120,18 +120,12 @@
 
         &__img
         {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr;
-            justify-items: center;
-            align-items: start;
             grid-row: 1 / span 2;
+            width: 100%;
+            height: auto;
+            display: block;
+            grid-area: picture;
 
-
-            @include responsive(phone-l)
-            {
-                grid-area: picture;
-            }
 
             &__picture,
             &__background
@@ -147,49 +141,6 @@
                 max-width: 60rem;
                 height: auto;
                 width: unset;
-                // clip-path: circle(40%);
-                clip-path: ellipse(21rem 21rem at 50% 40%);
-
-                @include responsive(laptop-l)
-                {
-                    max-width: 55rem;
-                }
-
-                @include responsive(laptop)
-                {
-                    max-width: 100%;
-                    clip-path: ellipse(21rem 21rem at 50% 30%);
-                }
-
-                @include responsive(tablet)
-                {
-                    clip-path: ellipse(21rem 21rem at 50% 25%);
-                }
-
-                // @media only screen and (max-width: 41em) //656px
-
-                // {
-                //     clip-path: ellipse(21rem 21rem at 50% 22%);
-                // }
-
-                @include responsive(phone-l)
-                {
-                    clip-path: ellipse(21rem 21rem at 50% 35%);
-
-                }
-
-                // @media only screen and (max-width: 30em) //480px
-
-                // {
-                //     clip-path: ellipse(21rem 21rem at 50% 22%);
-                // }
-
-                @include responsive(phone)
-                {
-                    clip-path: ellipse(21rem 21rem at 50% 40%);
-
-                }
-
             }
 
             &__background
@@ -247,8 +198,14 @@
             }
         }
 
+        &__heading
+        {
+            grid-area: heading;
+        }
+
         &__text
         {
+            grid-area: text;
             grid-column: 2 / span 1;
 
             @include responsive(phone-l)
@@ -280,6 +237,7 @@
             "text text text text text . pictures pictures pictures pictures pictures"
             ". . . arrow arrow arrow arrow arrow . . ."
         ;
+        grid-template-rows: auto 1fr auto;
 
         @include responsive(phone-l)
         {
@@ -776,6 +734,7 @@
         flex-direction: row;
         justify-content: center;
         flex-wrap: wrap;
+        margin-bottom: 5rem;
 
         @include responsive(laptop)
         {
@@ -795,7 +754,7 @@
             img
             {
                 // width: 100%;
-                transform: translateY(-2.5rem);
+                transform: translateY(-2rem);
                 position: relative;
                 z-index: -1;
             }
@@ -804,6 +763,8 @@
 
     &__item
     {
+        transition: all 0.2s;
+        position: relative;
         background-color: $color-white;
         border-radius: 1rem;
         padding: 3rem 8rem;
@@ -822,7 +783,8 @@
 
         &__img
         {
-            width: 20rem;
+            // width: 20rem;
+            height: 12rem;
             display: block;
             margin: 0 auto;
 
@@ -882,6 +844,12 @@
         }
     }
 
+    &__container
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
     &__item
     {
 
@@ -889,7 +857,10 @@
         border-radius: 1rem;
         padding: 1rem 1rem;
 
-
+        &:not(:last-child)
+        {
+            margin-bottom: 1.5rem;
+        }
 
 
         &__question

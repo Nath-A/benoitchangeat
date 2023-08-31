@@ -28,3 +28,16 @@
 {
     display: none !important;
 }
+
+.u_item-selected
+{
+    transform: scale(110%) !important;
+    z-index: 1001 !important;
+
+}
+
+.u_to-fix
+{
+    font-weight: 700;
+    color: red;
+}
