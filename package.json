@@ -6,7 +6,9 @@
   "source": "index.html",
   "scripts": {
     "dev": "vite",
-    "compile": "sass sass/main.scss css/preview-style.comp.css"
+    "compile": "sass sass/main.scss css/preview-style.comp.css",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "devDependencies": {
     "sass": "^1.58.3",
