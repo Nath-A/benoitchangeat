@@ -5,6 +5,7 @@ export default {
     build: {
         outDir: "build",
         cssTarget: "chrome61",
+        base: "./"
         // minify: false,
 
 
