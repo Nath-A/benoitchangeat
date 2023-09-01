@@ -5,8 +5,8 @@ export default {
     build: {
         outDir: "build",
         cssTarget: "chrome61",
-        base: "/benoitchangeat"
-        // minify: false,
+        base: "/benoitchangeat",
+        minify: false
 
 
     },
