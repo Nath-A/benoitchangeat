@@ -48,3 +48,26 @@ console.log(navigationLinks);
 for (let i = 0; i < navigationLinks.length; i++) {
   navigationLinks[i].addEventListener("click", closeNavigation);
 }
+let popUp = document.getElementById("cookiePopup");
+document.getElementById("acceptCookie").addEventListener("click", () => {
+  let d = /* @__PURE__ */ new Date();
+  d.setMinutes(2 + d.getMinutes());
+  document.cookie = "myCookieName=thisIsMyCookie; expires = " + d + ";";
+  popUp.classList.add("cookie-popup--hide");
+  popUp.classList.remove("cookie-popup__show");
+});
+const checkCookie = () => {
+  let input = document.cookie.split("=");
+  if (input[0] == "myCookieName") {
+    popUp.classList.add("cookie-popup--hide");
+    popUp.classList.remove("cookie-popup__show");
+  } else {
+    popUp.classList.add("cookie-popup__show");
+    popUp.classList.remove("cookie-popup--hide");
+  }
+};
+window.onload = () => {
+  setTimeout(() => {
+    checkCookie();
+  }, 2e3);
+};
