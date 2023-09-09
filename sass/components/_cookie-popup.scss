@@ -1,0 +1,71 @@
+@use "../abstracts" as *;
+
+.cookie-popup
+{
+    background-color: #ffffff;
+    position: fixed;
+    z-index: 10000;
+    width: 70vw;
+    max-width: 50rem;
+    box-shadow: 0 0 2rem rgba(5, 0, 31, 0.15);
+    padding: 2rem 1.4rem;
+    border-radius: 0.6rem;
+    transition: all 0.5s ease-in;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @include responsive(phone-l)
+    {
+        width: 100vw;
+        max-width: unset;
+    }
+
+    &__img
+    {
+        display: block;
+        width: 3.75em;
+        transform: translateZ(0);
+        position: relative;
+        margin: auto;
+    }
+
+    &__text
+    {
+        text-align: center;
+        margin: 1.4em 0;
+        font-size: 1rem;
+    }
+
+    &__button
+    {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+
+    &--hide
+    {
+        visibility: hidden;
+        bottom: 0;
+        right: 2em;
+
+        @include responsive(phone-l)
+        {
+            bottom: 2em;
+            right: 0;
+        }
+    }
+
+    &--show
+    {
+        visibility: visible;
+        bottom: 2em;
+        right: 2em;
+
+        @include responsive(phone-l)
+        {
+            right: 0;
+            bottom: 0;
+        }
+    }
+}
