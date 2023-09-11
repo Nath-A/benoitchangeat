@@ -1,3 +1,4 @@
+'use strict';
 import '../sass/main.scss';
 
 // ? : Menu qui se ferme après le clic !
@@ -21,43 +22,50 @@ for (let i = 0; i < navigationLinks.length; i++)
 
 
 // ? Cookie Popup
-let popUp = document.getElementById("cookiePopup");
-//When user clicks the accept button
-document.getElementById("acceptCookie").addEventListener("click", () =>
-{
-    //Create date object
-    let d = new Date();
-    //Increment the current time by 1 minute (cookie will expire after 1 minute)
-    d.setMinutes(2 + d.getMinutes());
-    //Create Cookie withname = myCookieName, value = thisIsMyCookie and expiry time=1 minute
-    document.cookie = "myCookieName=thisIsMyCookie; expires = " + d + ";";
-    //Hide the popup
-    popUp.classList.add("cookie-popup--hide");
-    popUp.classList.remove("cookie-popup__show");
-});
-//Check if cookie is already present
-const checkCookie = () =>
-{
-    //Read the cookie and split on "="
-    let input = document.cookie.split("=");
-    //Check for our cookie
-    if (input[0] == "myCookieName")
-    {
-        //Hide the popup
-        popUp.classList.add("cookie-popup--hide");
-        popUp.classList.remove("cookie-popup__show");
-    } else
-    {
-        //Show the popup
-        popUp.classList.add("cookie-popup__show");
-        popUp.classList.remove("cookie-popup--hide");
-    }
-};
-//Check if cookie exists when page loads
-window.onload = () =>
-{
-    setTimeout(() =>
-    {
-        checkCookie();
-    }, 2000);
-};
+// let popUp = document.getElementById("cookiePopup");
+// //When user clicks the accept button
+// document.getElementById("acceptCookie").addEventListener("click", () =>
+// {
+//     //Create date object
+//     let d = new Date();
+//     //Increment the current time by 1 minute (cookie will expire after 1 minute)
+//     d.setMinutes(2 + d.getMinutes());
+//     //Create Cookie withname = myCookieName, value = thisIsMyCookie and expiry time=1 minute
+//     document.cookie = "myCookieName=thisIsMyCookie; expires = " + d + ";";
+//     //Hide the popup
+//     popUp.classList.add("cookie-popup--hide");
+//     popUp.classList.remove("cookie-popup__show");
+// });
+// //Check if cookie is already present
+// const checkCookie = () =>
+// {
+//     //Read the cookie and split on "="
+//     let input = document.cookie.split("=");
+//     //Check for our cookie
+//     if (input[0] == "myCookieName")
+//     {
+//         //Hide the popup
+//         popUp.classList.add("cookie-popup--hide");
+//         popUp.classList.remove("cookie-popup__show");
+//     } else
+//     {
+//         //Show the popup
+//         popUp.classList.add("cookie-popup__show");
+//         popUp.classList.remove("cookie-popup--hide");
+//     }
+// };
+// //Check if cookie exists when page loads
+// window.onload = () =>
+// {
+//     setTimeout(() =>
+//     {
+//         checkCookie();
+//     }, 2000);
+// };
+
+const cookiePopupText = document.getElementById("cookiePopupText");
+const paragraph = `Notre site web utilise des cookies essentiels à son fonctionnement. Sans eux, nous ne pouvons pas répondre à vos demandes ou fournir les services nécessaires.<br/>
+Avant de continuer à utiliser notre site web, vous devez approuver et accepter notre
+<a href="politique-confidentialite.html " target="_blank">politique de confidentialité</a>.
+`;
+cookiePopupText.insertAdjacentHTML("afterbegin", paragraph);
