@@ -259,17 +259,12 @@
                         </ul>
 
                         </p>
-                        <a href="pdf/Brochure_Orientation.pdf" target="_blank" rel="noopener noreferrer"
-                            class="btn btn-secondary btn--icon offers__item__btn"><i
+                        <button class="btn btn-secondary btn--icon offers__item__btn" id="offersChangement"><i
                                 class="fa fa-download"></i>Descriptif
-                            détaillé</a>
+                            détaillé</button>
                     </div>
                 </div>
                 <div class="offers__item u_item-selected">
-                    <!-- <div class="offers__item__modal u_hidden modal" id="pack-orientation-pdf">
-
-                        <iframe src="pdf/Brochure_Orientation.pdf" class="modal__iframe"></iframe>
-                    </div> -->
                     <img src="img/08_offre-pack-orientation.svg" alt="icone orientation" class="offers__item__img">
                     <h3 class="offers__item__heading heading-tertiary heading-tertiary">Les packs
                         <span>Orientation</span>
@@ -305,10 +300,9 @@
                         <p class="offers__item__text__paragraph">Plus qu’une décision à prendre : celle de s’engager
                             dans
                             une voie qui fait sens.</p>
-                        <a href="pdf/Brochure_Orientation.pdf" target="_blank" rel="noopener noreferrer"
-                            class="btn btn-secondary btn--icon offers__item__btn"><i
+                        <button class="btn btn-secondary btn--icon offers__item__btn" id="offersOrientation"><i
                                 class="fa fa-download"></i>Descriptif
-                            détaillé</a>
+                            détaillé</button>
                     </div>
                 </div>
                 <div class="offers__item">
@@ -340,6 +334,11 @@
                             class="fa fa-envelope"></i>Demander un devis</a>
                 </div>
             </div>
+            <div class="offers__modal u_hidden modal">
+                <button class="offers__modal__close">&times;</button>
+
+            </div>
+            <div class="u_hidden modal__overlay" id="overlay"></div>
         </section>
         <section class="faq">
             <div class="container--1200 grid grid-2x1fr">
@@ -603,7 +602,7 @@
             </a></p>
     </footer>
 
-    <section id="cookiePopup" class="cookie-popup--show cookie-popup">
+    <section id="cookiePopup" class="cookie-popup--hide cookie-popup">
         <img src="img/00_cookie.png" class="cookie-popup__img" />
         <p class="cookie-popup__text" id="cookiePopupText"></p>
         <button id="acceptCookie" class="btn btn-secondary cookie-popup__button">J'accepte</button>

@@ -650,13 +650,15 @@
 
     & > *
     {
-        position: relative;
+        // position: relative;
         z-index: 10;
     }
 
     & > div:first-child // container grid original 3x1fr
 
     {
+        position: relative;
+
         @include responsive(laptop)
         {
             grid-template-columns: repeat(2, 1fr);

@@ -1,0 +1,29 @@
+@use "../abstracts" as *;
+
+.modal
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-self: center;
+    justify-self: center;
+    width: 80vw;
+    height: 80vh;
+    background-color: $color-white;
+    padding: 3rem;
+    border-radius: 0.5rem;
+    z-index: 900 !important;
+
+    &__overlay
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vw;
+        background-color: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(3px);
+        z-index: 11 !important;
+    }
+}
