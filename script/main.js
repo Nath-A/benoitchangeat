@@ -27,6 +27,11 @@ const closeModal = function ()
 {
     modal.classList.add('u_hidden');
     overlay.classList.add('u_hidden');
+
+    const toRemove = document.querySelector('.modal__iframe');
+
+    toRemove.parentNode.removeChild(toRemove);
+
 }
 
 let modalContent;
@@ -44,7 +49,7 @@ const openModalChangement = function ()
 {
     modal.classList.remove('u_hidden');
     overlay.classList.remove('u_hidden');
-    const modalContent = `<p>COUCOU !<br/> <img src="https://place-puppy.com/720x1080" alt="placepuppy"/></p>`;
+    const modalContent = `<iframe src="pdf/Brochure_Changement.pdf" class="modal__iframe"></iframe>`;
     modal.insertAdjacentHTML('beforeend', modalContent);
 }
 
@@ -52,24 +57,6 @@ btnOpenModalOrientation.addEventListener('click', openModalOrientation);
 btnOpenModalChangement.addEventListener('click', openModalChangement);
 
 
-// for (let i = 0; i < btnOpenModal.length; i++)
-// {
-//     btnOpenModal[i].addEventListener('click', openModal);
-//     if (btnOpenModal[i] == 0)
-//     {
-//         modalContent = `<p>COUCOU !<br/> <img src="https://place-puppy.com/720x1080" alt="placepuppy"/></p>`;
-
-//         console.log(btnOpenModal[i]);
-//     }
-//     else if (btnOpenModal[i] == 1)
-//     {
-//         modalContent = `<iframe src="pdf/Brochure_Orientation.pdf" class="modal__iframe"></iframe>`; console.log(modalContent);
-
-//     }
-//     console.log(btnOpenModal[i])
-//     console.log(modalContent);
-
-// }
 
 
 btnCloseModal.addEventListener('click', closeModal);
