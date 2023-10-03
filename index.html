@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Benoit Changeat * un coach qui rox du pinpon !</title>
-    <script type="module" crossorigin src="assets/index-9b6c427c.js"></script>
-    <link rel="stylesheet" href="assets/index-9175e807.css">
+    <script type="module" crossorigin src="assets/index-016006b7.js"></script>
+    <link rel="stylesheet" href="assets/index-c494e565.css">
 </head>
 
 <body>
@@ -32,11 +32,8 @@
         </nav>
     </div>
     <header class="header">
-        <h1>Goodbye le header :')</h1>
     </header>
     <main>
-
-
         <section class="teaser">
             <div class="container--1200">
                 <h2 class="heading-secondary teaser__heading">
@@ -267,17 +264,12 @@
                         </ul>
 
                         </p>
-                        <a href="pdf/Brochure_Orientation.pdf" target="_blank" rel="noopener noreferrer"
-                            class="btn btn-secondary btn--icon offers__item__btn"><i
+                        <button class="btn btn-secondary btn--icon offers__item__btn" id="offersChangement"><i
                                 class="fa fa-download"></i>Descriptif
-                            détaillé</a>
+                            détaillé</button>
                     </div>
                 </div>
                 <div class="offers__item u_item-selected">
-                    <!-- <div class="offers__item__modal u_hidden modal" id="pack-orientation-pdf">
-
-                        <iframe src="pdf/Brochure_Orientation.pdf" class="modal__iframe"></iframe>
-                    </div> -->
                     <img src="assets/08_offre-pack-orientation-e63f8fba.svg" alt="icone orientation"
                         class="offers__item__img">
                     <h3 class="offers__item__heading heading-tertiary heading-tertiary">Les packs
@@ -314,10 +306,9 @@
                         <p class="offers__item__text__paragraph">Plus qu’une décision à prendre : celle de s’engager
                             dans
                             une voie qui fait sens.</p>
-                        <a href="pdf/Brochure_Orientation.pdf" target="_blank" rel="noopener noreferrer"
-                            class="btn btn-secondary btn--icon offers__item__btn"><i
+                        <button class="btn btn-secondary btn--icon offers__item__btn" id="offersOrientation"><i
                                 class="fa fa-download"></i>Descriptif
-                            détaillé</a>
+                            détaillé</button>
                     </div>
                 </div>
                 <div class="offers__item">
@@ -350,6 +341,12 @@
                             class="fa fa-envelope"></i>Demander un devis</a>
                 </div>
             </div>
+            <div class="offers__modal u_hidden modal">
+                <i class="fas fa-times offers__modal__close modal__close"></i>
+
+                <!-- Insert here modal from JS, before end -->
+            </div>
+            <div class="u_hidden modal__overlay" id="overlay"></div>
         </section>
         <section class="faq">
             <div class="container--1200 grid grid-2x1fr">
@@ -564,7 +561,7 @@
                 class="btn btn-primary call__btn">Faire le point gratuitement</a>
         </section>
         <section class="follow-me">
-            <div class="follow-me__container container--1200 grid-2x1fr grid">
+            <div class="follow-me__container container--1200 grid-3x1fr grid">
                 <h2 class="follow-me__heading heading-secondary">
                     <span class="heading-secondary--up">Mes réseaux sociaux</span>
                     <span class="heading-secondary--main">Des cactus, des parpaings & du pain !</span>
@@ -576,16 +573,16 @@
                 </p>
                 <div class="follow-me__social-networks">
                     <a href="#" target="_blank" class="follow-me__social-networks__item" rel="noopener noreferrer">
-                        <img src="https://place-puppy.com/300x75" alt="placepuppy"
-                            class="follow-me__social-networks__item__img">
+                        <img src="https://placehold.co/300x75/EEE/2E20A7?font=raleway&text=Suivez-moi+sur+R%C3%A9seau+Social+X"
+                            alt="placepuppy" class="follow-me__social-networks__item__img">
                     </a>
                     <a href="#" target="_blank" class="follow-me__social-networks__item" rel="noopener noreferrer">
-                        <img src="https://place-puppy.com/300x75" alt="placepuppy"
-                            class="follow-me__social-networks__item__img">
+                        <img src="https://placehold.co/300x75/EEE/2E20A7?font=raleway&text=Suivez-moi+sur+R%C3%A9seau+Social+Y"
+                            alt="placepuppy" class="follow-me__social-networks__item__img">
                     </a>
                     <a href="#" target="_blank" class="follow-me__social-networks__item" rel="noopener noreferrer">
-                        <img src="https://place-puppy.com/300x75" alt="placepuppy"
-                            class="follow-me__social-networks__item__img">
+                        <img src="https://placehold.co/300x75/EEE/2E20A7?font=raleway&text=Suivez-moi+sur+R%C3%A9seau+Social+Z"
+                            alt="placepuppy" class="follow-me__social-networks__item__img">
                     </a>
                 </div>
             </div>
@@ -614,16 +611,11 @@
             </a></p>
     </footer>
 
-    <div id="cookiePopup" class="cookie-popup--hide cookie-popup">
+    <section id="cookiePopup" class="cookie-popup--hide cookie-popup">
         <img src="assets/00_cookie-03f4e47d.png" class="cookie-popup__img" />
-        <p class="cookie-popup__text">
-            Our website uses cookies to provide your browsing experience and
-            relevant information. Notre site web utilise des cookies pour vous fournir une expérience et une information
-            efficace (???)Avant de continuer à utiliser notre site web, vous devez approuver et accepter notre
-            <a href="politique-confidentialite.html " target="_blank">politique de confidentialité</a>.
-        </p>
+        <p class="cookie-popup__text" id="cookiePopupText"></p>
         <button id="acceptCookie" class="btn btn-secondary cookie-popup__button">J'accepte</button>
-    </div>
+    </section>
 
     <script src="https://kit.fontawesome.com/05be3ed2ff.js" crossorigin="anonymous"></script>
 

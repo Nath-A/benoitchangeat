@@ -48,6 +48,35 @@ console.log(navigationLinks);
 for (let i = 0; i < navigationLinks.length; i++) {
   navigationLinks[i].addEventListener("click", closeNavigation);
 }
+const modal = document.querySelector(".offers__modal");
+const overlay = document.getElementById("overlay");
+const btnCloseModal = document.querySelector(".offers__modal__close");
+const btnOpenModalOrientation = document.getElementById("offersOrientation");
+const btnOpenModalChangement = document.getElementById("offersChangement");
+const closeModal = function() {
+  modal.classList.add("u_hidden");
+  overlay.classList.add("u_hidden");
+  const toRemove = document.querySelector(".modal__iframe");
+  toRemove.parentNode.removeChild(toRemove);
+};
+let modalContent;
+const openModalOrientation = function() {
+  modal.classList.remove("u_hidden");
+  overlay.classList.remove("u_hidden");
+  modalContent = `<iframe src="pdf/Brochure_Orientation.pdf" class="modal__iframe"></iframe>`;
+  console.log(modalContent);
+  modal.insertAdjacentHTML("beforeend", modalContent);
+};
+const openModalChangement = function() {
+  modal.classList.remove("u_hidden");
+  overlay.classList.remove("u_hidden");
+  const modalContent2 = `<iframe src="pdf/Brochure_Changement.pdf" class="modal__iframe"></iframe>`;
+  modal.insertAdjacentHTML("beforeend", modalContent2);
+};
+btnOpenModalOrientation.addEventListener("click", openModalOrientation);
+btnOpenModalChangement.addEventListener("click", openModalChangement);
+btnCloseModal.addEventListener("click", closeModal);
+overlay.addEventListener("click", closeModal);
 let popUp = document.getElementById("cookiePopup");
 document.getElementById("acceptCookie").addEventListener("click", () => {
   let d = /* @__PURE__ */ new Date();
@@ -71,3 +100,9 @@ window.onload = () => {
     checkCookie();
   }, 2e3);
 };
+const cookiePopupText = document.getElementById("cookiePopupText");
+const paragraph = `Notre site web utilise des cookies essentiels à son fonctionnement. Sans eux, nous ne pouvons pas répondre à vos demandes ou fournir les services nécessaires.<br/>
+Avant de continuer à utiliser notre site web, vous devez approuver et accepter notre
+<a href="politique-confidentialite.html " target="_blank">politique de confidentialité</a>.
+`;
+cookiePopupText.insertAdjacentHTML("afterbegin", paragraph);
