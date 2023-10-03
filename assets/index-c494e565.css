@@ -1123,7 +1123,6 @@ section
   width: 100%;
   z-index: 1;
   background: url(03_citation-cosmic-environment-with-millions-colorful-bright-lights.jpg);
-  background: url(../../img/03_citation-cosmic-environment-with-millions-colorful-bright-lights.jpg);
   background-position: left center;
 }
 
@@ -1473,7 +1472,7 @@ section
   width: 100%;
   z-index: 1;
   background-image: url(06_jack-b-SxhNnU46jAc-unsplash.jpg);
-  background-image: url(../../img/06_jack-b-SxhNnU46jAc-unsplash.jpg);
+
   background-position: left bottom;
 }
 
@@ -1677,7 +1676,6 @@ section
   height: 100%;
   width: 100%;
   z-index: 1;
-  background-image: url(../../img/08_cosmic-environment-with-millions-colorful-bright-lights.jpg);
   background-image: url(assets/08_cosmic-environment-with-millions-colorful-bright-lights-753db1d4.jpg);
   background-position: center;
 }
@@ -1933,7 +1931,6 @@ section
   height: 100%;
   width: 100%;
   z-index: 1;
-  background-image: url(../../img/10_temoignages-pexels-fauxels-3184426.jpg);
   background-image: url(assets/10_temoignages-pexels-fauxels-3184426-af07cca2.jpg);
   background-position: center;
 }
