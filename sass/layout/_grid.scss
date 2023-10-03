@@ -15,6 +15,17 @@
         }
     }
 
+    &-3x1fr
+    {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 2rem;
+
+        @include responsive(phone-l)
+        {
+            grid-template-columns: 1fr;
+        }
+    }
+
     &-11x1fr
     {
         grid-template-columns: repeat(11, 1fr);

@@ -65,8 +65,8 @@
     &::before
     {
         @include background-image;
+        background: url(03_citation-cosmic-environment-with-millions-colorful-bright-lights.jpg);
         background: url(../../img/03_citation-cosmic-environment-with-millions-colorful-bright-lights.jpg);
-        background: url(../03_citation-cosmic-environment-with-millions-colorful-bright-lights.jpg);
         background-position: left center;
     }
 
@@ -416,8 +416,8 @@
     {
 
         @include background-image;
-        background-image: url(../../img/06_jack-b-SxhNnU46jAc-unsplash.jpg);
         background-image: url(06_jack-b-SxhNnU46jAc-unsplash.jpg);
+        background-image: url(../../img/06_jack-b-SxhNnU46jAc-unsplash.jpg);
         background-position: left bottom;
 
     }
@@ -511,7 +511,7 @@
 .gift
 {
 
-    min-height: 100vh;
+    // min-height: 100vh;
     align-items: center;
 
     @include responsive(laptop)
@@ -1011,10 +1011,10 @@
 //? ----------------------------------- FOLLOW-ME
 .follow-me
 {
-    background-image: url(https://place-puppy.com/1980x800);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    // background-image: url(https://placehold.co/1920x800/EEE/FFF?font=raleway&text=Section+R%C3%A9seaux+sociaux+WIP);
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // background-size: cover;
     padding: 5rem 0;
 
     // @include responsive(phone-l)
@@ -1024,19 +1024,19 @@
 
     &__container
     {
-        grid-template-areas: "heading buttons" "text buttons";
+        grid-template-areas: "heading heading buttons" "text text buttons";
     }
 
     &__heading
     {
-        color: $color-white;
+        // color: $color-white;
         grid-area: heading;
     }
 
     &__paragraph
     {
         grid-area: text;
-        color: $color-white;
+        // color: $color-white;
     }
 
     &__social-networks
@@ -1050,19 +1050,11 @@
             &__img
             {
                 border-radius: 2rem;
+                border-color: $color-primary;
             }
         }
     }
 
-
-    // &__baseline
-    // {}
-
-    // &__heading
-    // {}
-
-    // &__paragraph
-    // {}
 
     &__form
     {
