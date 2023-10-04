@@ -65,8 +65,8 @@
     &::before
     {
         @include background-image;
-        background: url(03_citation-cosmic-environment-with-millions-colorful-bright-lights.jpg);
         background: url(../../img/03_citation-cosmic-environment-with-millions-colorful-bright-lights.jpg);
+        background: url(../03_citation-cosmic-environment-with-millions-colorful-bright-lights.jpg);
         background-position: left center;
     }
 
@@ -416,8 +416,8 @@
     {
 
         @include background-image;
-        background-image: url(06_jack-b-SxhNnU46jAc-unsplash.jpg);
         background-image: url(../../img/06_jack-b-SxhNnU46jAc-unsplash.jpg);
+        background-image: url(../06_jack-b-SxhNnU46jAc-unsplash.jpg);
         background-position: left bottom;
 
     }
