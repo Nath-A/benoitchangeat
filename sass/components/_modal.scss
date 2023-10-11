@@ -13,7 +13,7 @@
     background-color: $color-white;
     padding: 1.5rem 3rem;
     border-radius: 0.5rem;
-    z-index: 900 !important;
+    z-index: 9999 !important;
     display: grid;
     grid-template-columns: 1fr auto;
     grid-template-rows: auto 1fr;
@@ -29,7 +29,7 @@
         height: 100vw;
         background-color: rgba($color-black, 0.6);
         backdrop-filter: blur(3px);
-        z-index: 11 !important;
+        z-index: 1000 !important;
 
     }
 
